@@ -78,7 +78,7 @@ def adjust_contrast(val):
 
 
 
-imageLeft = cv2.imread('dog.bmp')
+imageLeft = cv2.imread('Assigment1/dog.bmp')
 adjusted = imageLeft.copy()
 
 #make window
@@ -107,10 +107,10 @@ while True:
         break
     if cv2.waitKey(1) == ord('s'):
         # Save the adjusted image
-        cv2.imwrite('dog-modified.bmp', adjusted)
+        cv2.imwrite('Assigment1/dog-modified.bmp', adjusted)
         
         # Reload the saved image as the new 'imageLeft' for further adjustments
-        imageLeft = cv2.imread('dog-modified.bmp')
+        imageLeft = cv2.imread('Assigment1/dog-modified.bmp')
         adjusted = imageLeft.copy()  # Update the adjusted image to match the new left image
         
         # Update the display
