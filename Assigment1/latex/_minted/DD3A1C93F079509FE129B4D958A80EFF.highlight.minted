@@ -1,0 +1,29 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}\PYG{p}{:}
+    \PYG{c+c1}{\PYGZsh{}convert the image to grayscale for histogram calculation}
+    \PYG{n}{gray} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{cvtColor}\PYG{p}{(}\PYG{n}{image}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{COLOR\PYGZus{}BGR2GRAY}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}calculate histogram}
+    \PYG{n}{hist} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{calcHist}\PYG{p}{(}\PYG{p}{[}\PYG{n}{gray}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{256}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{256}\PYG{p}{]}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}Normalize the histogram to fit it in the image window}
+    \PYG{n}{hist} \PYG{o}{=} \PYG{n}{hist} \PYG{o}{/} \PYG{n}{hist}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{}Normalize to the maximum value for scaling}
+    \PYG{c+c1}{\PYGZsh{}Create a blank image to draw the histogram}
+    \PYG{n}{hist\PYGZus{}height} \PYG{o}{=} \PYG{n}{image}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    \PYG{n}{hist\PYGZus{}width} \PYG{o}{=} \PYG{l+m+mi}{256}
+    \PYG{n}{hist\PYGZus{}image} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{p}{(}\PYG{n}{hist\PYGZus{}height}\PYG{p}{,} \PYG{n}{hist\PYGZus{}width}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{uint8}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}Draw the histogram on the blank image}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{256}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{line}\PYG{p}{(}
+            \PYG{n}{hist\PYGZus{}image}\PYG{p}{,}
+            \PYG{p}{(}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{hist\PYGZus{}height} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{hist}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{*} \PYG{n}{hist\PYGZus{}height}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+            \PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{hist\PYGZus{}height} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{hist}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{*} \PYG{n}{hist\PYGZus{}height}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+            \PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mi}{1}
+        \PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}Resize the histogram image to the same size as the original image}
+    \PYG{n}{scaled} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{resize}\PYG{p}{(}\PYG{n}{hist\PYGZus{}image}\PYG{p}{,} \PYG{p}{(}\PYG{n}{image}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{image}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{scaled}
+\end{MintedVerbatim}

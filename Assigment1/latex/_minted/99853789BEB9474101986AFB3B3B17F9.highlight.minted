@@ -1,0 +1,23 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{adjust\PYGZus{}brightness}\PYG{p}{(}\PYG{n}{val}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{global} \PYG{n}{lastConst}
+    \PYG{k}{global} \PYG{n}{lastBright}
+    \PYG{k}{global} \PYG{n}{adjusted}
+
+    \PYG{n}{lastBright} \PYG{o}{=} \PYG{p}{(}\PYG{n}{val} \PYG{o}{/} \PYG{l+m+mi}{128}\PYG{p}{)}
+
+    \PYG{n}{adjusted} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{convertScaleAbs}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{,}
+    \PYG{n}{alpha}\PYG{o}{=}\PYG{n}{lastBright}\PYG{p}{,} \PYG{n}{beta}\PYG{o}{=}\PYG{n}{lastConst}\PYG{p}{)}
+
+    \PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{,} \PYG{n}{adjusted}\PYG{p}{)}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}generate scaled histograms for original and adjusted images}
+    \PYG{n}{hist\PYGZus{}left} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{)}
+    \PYG{n}{hist\PYGZus{}adjusted} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{adjusted}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}stack the images and histograms}
+    \PYG{n}{stacked\PYGZus{}with\PYGZus{}hist} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{stacked}\PYG{p}{,}
+    \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{hist\PYGZus{}left}\PYG{p}{,} \PYG{n}{hist\PYGZus{}adjusted}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+
+    \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{WINDOWNAME}\PYG{p}{,} \PYG{n}{stacked\PYGZus{}with\PYGZus{}hist}\PYG{p}{)}
+\end{MintedVerbatim}
