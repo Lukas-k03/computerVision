@@ -9,11 +9,11 @@
 \PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{,} \PYG{n}{adjusted}\PYG{p}{)}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{}generate scaled histograms for the original image}
-\PYG{n}{hist\PYGZus{}left} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{)}
-\PYG{n}{hist\PYGZus{}adjusted} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{adjusted}\PYG{p}{)}
+\PYG{n}{histleft} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{)}
+\PYG{n}{histadjusted} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{adjusted}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{}stack the images and histograms initially}
-\PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{stacked}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{hist\PYGZus{}left}\PYG{p}{,} \PYG{n}{hist\PYGZus{}adjusted}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{stacked}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{histleft}\PYG{p}{,} \PYG{n}{histadjusted}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{}show the stacked image with histograms}
 \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{WINDOWNAME}\PYG{p}{,} \PYG{n}{stacked}\PYG{p}{)}

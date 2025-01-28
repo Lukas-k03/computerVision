@@ -10,29 +10,23 @@ adjusted = None
 def generateScaledHistogram(image):
     #convert the image to grayscale for histogram calculation
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    
-    #calculate histogram
+
     hist = cv2.calcHist([gray], [0], None, [256], [0, 256])
     
-    # Normalize the histogram to fit it in the image window
-    hist = hist / hist.max()  # Normalize to the maximum value for scaling
+    #normalize the histogram to fit it in the image window
+    hist = hist / hist.max()  
     
-    #Create a blank image to draw the histogram
-    hist_height = image.shape[0]
-    hist_width = 256 
-    hist_image = np.zeros((hist_height, hist_width, 3), dtype=np.uint8)
+    #create a blanck histogram so we can fill it with the data
+    histheight = image.shape[0]
+    histwidth = 256 
+    histimage = np.zeros((histheight, histwidth, 3), dtype=np.uint8)
     
-    #Draw the histogram on the blank image
+    #draw
     for i in range(1, 256):
-        cv2.line(
-            hist_image,
-            (i-1, hist_height - int(hist[i-1] * hist_height)),
-            (i, hist_height - int(hist[i] * hist_height)),
-            (255, 255, 255), 1
-        )
+        cv2.line(histimage,(i-1, histheight - int(hist[i-1] * histheight)),(i, histheight - int(hist[i] * histheight)),(255, 255, 255), 1)
     
-    #Resize the histogram image to the same size as the original image
-    scaled = cv2.resize(hist_image, (image.shape[1], image.shape[0]))
+    #resize the histogram image to the same size as the original image
+    scaled = cv2.resize(histimage, (image.shape[1], image.shape[0]))
     
     return scaled
 
@@ -41,19 +35,19 @@ def adjust_brightness(val):
     global lastBright
     global adjusted
 
-    lastBright = (val / 128)
+    lastBright = (val - 128)
 
-    adjusted = cv2.convertScaleAbs(imageLeft, alpha= lastBright, beta = lastConst)
+    adjusted = cv2.convertScaleAbs(imageLeft, alpha= lastConst, beta = lastBright)
     stacked = np.hstack((imageLeft, adjusted))
     
-    # Generate scaled histograms for original and adjusted images
-    hist_left = generateScaledHistogram(imageLeft)
-    hist_adjusted = generateScaledHistogram(adjusted)
+    #generate scaled histograms for original and adjusted images
+    histleft = generateScaledHistogram(imageLeft)
+    histadjusted = generateScaledHistogram(adjusted)
     
-    # Stack the images and histograms
-    stacked_with_hist = np.vstack((stacked, np.hstack((hist_left, hist_adjusted))))
+    #stack the images and histograms
+    stacked = np.vstack((stacked, np.hstack((histleft, histadjusted))))
     
-    cv2.imshow(WINDOWNAME, stacked_with_hist)
+    cv2.imshow(WINDOWNAME, stacked)
 
 def adjust_contrast(val):
     global lastBright
@@ -61,20 +55,20 @@ def adjust_contrast(val):
     global adjusted
 
 
-    lastConst = val - 128
+    lastConst = val / 100
 
-    # Adjust contrast
-    adjusted = cv2.convertScaleAbs(imageLeft,alpha = lastBright , beta= lastConst )
+    #adjust contrast
+    adjusted = cv2.convertScaleAbs(imageLeft,alpha = lastConst , beta= lastBright )
     stacked = np.hstack((imageLeft, adjusted))
     
-    # Generate scaled histograms for original and adjusted images
-    hist_left = generateScaledHistogram(imageLeft)
-    hist_adjusted = generateScaledHistogram(adjusted)
+    #generate scaled histograms for original and adjusted images
+    histleft = generateScaledHistogram(imageLeft)
+    histadjusted = generateScaledHistogram(adjusted)
     
-    # Stack the images and histograms
-    stacked_with_hist = np.vstack((stacked, np.hstack((hist_left, hist_adjusted))))
+    #stack the images and histograms
+    stacked = np.vstack((stacked, np.hstack((histleft, histadjusted))))
     
-    cv2.imshow(WINDOWNAME, stacked_with_hist)
+    cv2.imshow(WINDOWNAME, stacked)
 
 
 
@@ -87,38 +81,38 @@ cv2.namedWindow(WINDOWNAME)
 #show default image
 stacked = np.hstack((imageLeft, adjusted))
 
+lastConst = 1
+lastBright = 0
+
 #generate scaled histograms for the original image
-hist_left = generateScaledHistogram(imageLeft)
-hist_adjusted = generateScaledHistogram(adjusted)
+histleft = generateScaledHistogram(imageLeft)
+histadjusted = generateScaledHistogram(adjusted)
 
 #stack the images and histograms initially
-stacked = np.vstack((stacked, np.hstack((hist_left, hist_adjusted))))
+stacked = np.vstack((stacked, np.hstack((histleft, histadjusted))))
 
 #show the stacked image with histograms
 cv2.imshow(WINDOWNAME, stacked)
 
 #create sliderbar for brightness and contrast
-cv2.createTrackbar('Brightness', WINDOWNAME, 128, 255, adjust_brightness)
-cv2.createTrackbar('Contrast', WINDOWNAME, 128, 255, adjust_contrast)
+cv2.createTrackbar('Brightness', WINDOWNAME, 127, 255, adjust_brightness)
+cv2.createTrackbar('Contrast', WINDOWNAME, 100, 300, adjust_contrast)
 
-# This loop keeps the window open until you hit 'q'
+#this loop keeps the window open until you hit 'q'
 while True:
     if cv2.waitKey(1) == ord('q'):
         break
     if cv2.waitKey(1) == ord('s'):
-        # Save the adjusted image
         cv2.imwrite('Assigment1/dog-modified.bmp', adjusted)
         
-        # Reload the saved image as the new 'imageLeft' for further adjustments
+        #reload the saved image as the new 'imageLeft' for further adjustments
         imageLeft = cv2.imread('Assigment1/dog-modified.bmp')
-        adjusted = imageLeft.copy()  # Update the adjusted image to match the new left image
+        adjusted = imageLeft.copy()
         
-        # Update the display
         stacked = np.hstack((imageLeft, adjusted))
         hist_left = generateScaledHistogram(imageLeft)
         hist_adjusted = generateScaledHistogram(adjusted)
         stacked_with_hist = np.vstack((stacked, np.hstack((hist_left, hist_adjusted))))
         cv2.imshow(WINDOWNAME, stacked_with_hist)
 
-# Cleanup
 cv2.destroyAllWindows()

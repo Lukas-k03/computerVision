@@ -1,0 +1,27 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2023a}]{geeksforgeeks_filter_color}
+GeeksforGeeks (2023a).
+\newblock ``Filter color with opencv, $<$https://www.geeksforgeeks.org/filter-color-with-opencv/$>$.
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2023b}]{geeksforgeeks_histogram_analysis}
+GeeksforGeeks (2023b).
+\newblock ``Opencv python program to analyze image using histogram, $<$https://www.geeksforgeeks.org/opencv-python-program-analyze-image-using-histogram/$>$.
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2023c}]{geeksforgeeks_imshow}
+GeeksforGeeks (2023c).
+\newblock ``Python opencv cv2.imshow() method, $<$https://www.geeksforgeeks.org/python-opencv-cv2-imshow-method/$>$.
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2023d}]{geeksforgeeks_imwrite}
+GeeksforGeeks (2023d).
+\newblock ``Python opencv cv2.imwrite() method, $<$https://www.geeksforgeeks.org/python-opencv-cv2-imwrite-method/$>$.
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2023e}]{geeksforgeeks_reading_image}
+GeeksforGeeks (2023e).
+\newblock ``Reading image in opencv using python, $<$https://www.geeksforgeeks.org/reading-image-opencv-using-python/$>$.
+
+\bibitem[\protect\citeauthoryear{}{{OpenCV}}{2025}]{opencv_linear_transform}
+{OpenCV} (2025).
+\newblock ``Basic linear transformations, $<$https://docs.opencv.org/4.x/d3/dc1/tutorial\_basic\_linear\_transform.html$>$.
+
+\end{thebibliography}
