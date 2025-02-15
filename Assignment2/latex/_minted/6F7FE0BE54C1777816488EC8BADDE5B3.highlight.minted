@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{iimageLeft} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imread}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{dog.bmp}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{adjusted} \PYG{o}{=} \PYG{n}{imageLeft}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}make window}
+\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{namedWindow}\PYG{p}{(}\PYG{n}{WINDOWNAME}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}show default image}
+\PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{,} \PYG{n}{adjusted}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}generate scaled histograms for the original image}
+\PYG{n}{histleft} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{)}
+\PYG{n}{histadjusted} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{adjusted}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}stack the images and histograms initially}
+\PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{stacked}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{histleft}\PYG{p}{,} \PYG{n}{histadjusted}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}show the stacked image with histograms}
+\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{WINDOWNAME}\PYG{p}{,} \PYG{n}{stacked}\PYG{p}{)}
+\end{MintedVerbatim}

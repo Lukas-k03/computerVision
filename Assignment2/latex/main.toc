@@ -1,0 +1,6 @@
+\contentsline {chapter}{Contents}{ii}{section*.1}%
+\contentsline {chapter}{List of Figures}{iii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {subsection}{\numberline {1.0.1}Background of Manual Calculation of Box Filter}{1}{subsection.1.0.1}%
+\contentsline {chapter}{References}{2}{chapter*.4}%
+\contentsfinish 

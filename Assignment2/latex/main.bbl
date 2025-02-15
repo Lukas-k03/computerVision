@@ -1,0 +1,23 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{}{ActiveState}{2025}]{activestate_tkinter_pack}
+ActiveState (2025).
+\newblock ``How to position buttons in tkinter with pack, $<$https://www.activestate.com/resources/quick-reads/how-to-position-buttons-in-tkinter-with-pack/$>$.
+\newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{NVIDIA}{2025}]{nvidia_box_filter}
+NVIDIA (2025).
+\newblock ``Box image filter, $<$https://docs.nvidia.com/vpi/algo_box_filter.html$>$.
+\newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{OpenCV}{2025}]{opencv_filtering}
+OpenCV (2025).
+\newblock ``Image filtering functions, $<$https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html$>$.
+\newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{TutorialsPoint}{2025}]{tutorialspoint_opencv_tkinter}
+TutorialsPoint (2025).
+\newblock ``Read an image with opencv and display it with tkinter, $<$https://www.tutorialspoint.com/read-an-image-with-opencv-and-display-it-with-tkinter$>$.
+\newblock Accessed: 2025-02-14.
+
+\end{thebibliography}

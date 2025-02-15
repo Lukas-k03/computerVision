@@ -1,0 +1,21 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{waitKey}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{==} \PYG{n+nb}{ord}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{break}
+    \PYG{k}{if} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{waitKey}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{==} \PYG{n+nb}{ord}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
+        \PYG{c+c1}{\PYGZsh{}save}
+        \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imwrite}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{dog\PYGZhy{}modified.bmp}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{adjusted}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{}reload the saved image}
+        \PYG{k}{as} \PYG{n}{the} \PYG{n}{new} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{imageLeft}\PYG{l+s+s1}{\PYGZsq{}} \PYG{k}{for} \PYG{n}{further} \PYG{n}{adjustments}
+        \PYG{n}{imageLeft} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imread}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{dog\PYGZhy{}modified.bmp}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{adjusted} \PYG{o}{=} \PYG{n}{imageLeft}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{}update the display}
+        \PYG{n}{stacked} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{,} \PYG{n}{adjusted}\PYG{p}{)}\PYG{p}{)}
+        \PYG{n}{hist\PYGZus{}left} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{imageLeft}\PYG{p}{)}
+        \PYG{n}{hist\PYGZus{}adjusted} \PYG{o}{=} \PYG{n}{generateScaledHistogram}\PYG{p}{(}\PYG{n}{adjusted}\PYG{p}{)}
+        \PYG{n}{stacked\PYGZus{}with\PYGZus{}hist} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{stacked}\PYG{p}{,}
+        \PYG{n}{np}\PYG{o}{.}\PYG{n}{hstack}\PYG{p}{(}\PYG{p}{(}\PYG{n}{hist\PYGZus{}left}\PYG{p}{,} \PYG{n}{hist\PYGZus{}adjusted}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+        \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imshow}\PYG{p}{(}\PYG{n}{WINDOWNAME}\PYG{p}{,} \PYG{n}{stacked\PYGZus{}with\PYGZus{}hist}\PYG{p}{)}
+\end{MintedVerbatim}

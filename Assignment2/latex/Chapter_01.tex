@@ -1,0 +1,23 @@
+\chapter{Introduction}
+
+%-------------------------------------------------------
+This Assignment 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SUBSECTION NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Background of Manual Calculation of Box Filter}
+A Box Filter can be denfined as the Kernel Matrix Equation below where M is the width of the filter and N is the height of the filter
+\[
+\text{box}_{m,n} = \frac{1}{mn}
+\begin{bmatrix}
+1 & 1 & 1 & \dots & 1 \\
+1 & 1 & 1 & \dots & 1 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & 1 & 1 & \dots & 1
+\end{bmatrix}_{m \times n}
+\]
+This can be applied to an image using convolution as discussed in lecture, Basically we can go pixel by pixel and apply the constant to each pixel and the average of its neighborhs
+\[
+I_{\text{filtered}} = I * \text{box}_{m,n} = \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} I(x-i, y-j) \cdot \frac{1}{mn}
+\]
+
