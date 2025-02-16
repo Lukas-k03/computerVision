@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{\PYGZsh{}convert OpenCV image (BGR) to (RGB) format}
+    \PYG{n}{stackConvert1} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{cvtColor}\PYG{p}{(}\PYG{n}{stack1}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{COLOR\PYGZus{}BGR2RGB}\PYG{p}{)}
+    \PYG{n}{stackConvert2} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{cvtColor}\PYG{p}{(}\PYG{n}{stack2}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{COLOR\PYGZus{}BGR2RGB}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{}convert the initial image to a format for Tkinter after the root window is created}
+    \PYG{n}{photo1} \PYG{o}{=} \PYG{n}{ImageTk}\PYG{o}{.}\PYG{n}{PhotoImage}\PYG{p}{(}\PYG{n}{Image}\PYG{o}{.}\PYG{n}{fromarray}\PYG{p}{(}\PYG{n}{stackConvert1}\PYG{p}{)}\PYG{p}{)}
+    \PYG{n}{photo2} \PYG{o}{=} \PYG{n}{ImageTk}\PYG{o}{.}\PYG{n}{PhotoImage}\PYG{p}{(}\PYG{n}{Image}\PYG{o}{.}\PYG{n}{fromarray}\PYG{p}{(}\PYG{n}{stackConvert2}\PYG{p}{)}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{}Tkinter display and pac}
+    \PYG{n}{imageTop} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Label}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{image}\PYG{o}{=}\PYG{n}{photo1}\PYG{p}{)}
+    \PYG{n}{imageTop}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{padx}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\end{MintedVerbatim}

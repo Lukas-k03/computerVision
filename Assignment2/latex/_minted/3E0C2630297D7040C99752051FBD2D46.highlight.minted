@@ -1,0 +1,56 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}filter functoin}
+\PYG{k}{def} \PYG{n+nf}{applyFilter}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{selectedFilter} \PYG{o}{=} \PYG{n}{filterCombo}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Box Filter (Manual)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{boxFilterManual}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Box Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{boxFilter}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel X Manual Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{sobelFilterXManual}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel Y Manual Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{sobelFilterYManual}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel X Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{sobelFilterX}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel Y Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{sobelFilterY}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel XY Manual Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{sobelFilterXYManual}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel XY Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{sobelFilterXY}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{selectedFilter} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Guassian Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{guassianFilter}\PYG{p}{(}\PYG{n}{photo2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}create a dropdown menu for filter selection}
+\PYG{n}{filterCombo} \PYG{o}{=} \PYG{n}{ttk}\PYG{o}{.}\PYG{n}{Combobox}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Box Filter (Manual)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Box Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel X Filter (Manual)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel Y Filter (Manual)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel X Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel Y Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel XY Filter (Manual)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Sobel XY Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Guassian Filter}\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{p}{]}\PYG{p}{,} \PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{readonly}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{filterCombo}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Box Filter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{filterCombo}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side}\PYG{o}{=}\PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}dropdown for filter dimension}
+\PYG{n}{combo} \PYG{o}{=} \PYG{n}{ttk}\PYG{o}{.}\PYG{n}{Combobox}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{3x3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{5x5}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{readonly}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{combo}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{3x3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} default value}
+\PYG{n}{combo}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,}\PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}Apply button}
+\PYG{n}{applyButton} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Apply}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n}{applyFilter}\PYG{p}{)}
+\PYG{n}{applyButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side}\PYG{o}{=}\PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}Buttons}
+\PYG{n}{closeButton} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Close}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n}{root}\PYG{o}{.}\PYG{n}{quit}\PYG{p}{)}
+\PYG{n}{closeButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{resetButton} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Reset}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n}{reset}\PYG{p}{)}
+\PYG{n}{resetButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Run the Tkinter window}
+\PYG{n}{root}\PYG{o}{.}\PYG{n}{mainloop}\PYG{p}{(}\PYG{p}{)}
+\end{MintedVerbatim}

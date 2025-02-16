@@ -1,0 +1,12 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{\PYGZsh{} Box filter summation}
+    \PYG{k}{for} \PYG{n}{y} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{height}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{width}\PYG{p}{)}\PYG{p}{:}
+            \PYG{c+c1}{\PYGZsh{} Channels represent each color, so we go color by color (3)}
+            \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{channels}\PYG{p}{)}\PYG{p}{:}
+                \PYG{c+c1}{\PYGZsh{} Get kernel window for averaging}
+                \PYG{c+c1}{\PYGZsh{} y:y gets from the current pixel to the kernel size}
+                \PYG{n}{window} \PYG{o}{=} \PYG{n}{paddedImage}\PYG{p}{[}\PYG{n}{y}\PYG{p}{:}\PYG{n}{y} \PYG{o}{+} \PYG{n}{dimension}\PYG{p}{,} \PYG{n}{x}\PYG{p}{:}\PYG{n}{x} \PYG{o}{+} \PYG{n}{dimension}\PYG{p}{,} \PYG{n}{c}\PYG{p}{]}
+                \PYG{c+c1}{\PYGZsh{} Compute the mean value for the pixel by using sum of the window with the kernel}
+                \PYG{n}{filteredImage}\PYG{p}{[}\PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{c}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{window} \PYG{o}{*} \PYG{n}{kernel}\PYG{p}{)}
+\end{MintedVerbatim}

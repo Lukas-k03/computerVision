@@ -1,0 +1,5 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFor every Y pixel than for every X pixel and then for every color (3) a KxK sliding window applys the Box Filter (Average) to the unflitered image.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qbox \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qfiltered \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Qbox \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q To implement this on our image we can simply transcribe the summation into a nested for loop, and then have it loop for each color channel.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QExplanation Of Tkinter GUI to Usable CV2 Images.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLukas Kelk\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QApplying the Sobel filter using\\E$"}

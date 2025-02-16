@@ -1,23 +1,48 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citeauthoryear{}{ActiveState}{2025}]{activestate_tkinter_pack}
-ActiveState (2025).
-\newblock ``How to position buttons in tkinter with pack, $<$https://www.activestate.com/resources/quick-reads/how-to-position-buttons-in-tkinter-with-pack/$>$.
+\bibitem[\protect\citeauthoryear{}{{ActiveState}}{2025}]{activestate_tkinter_pack}
+{ActiveState} (2025).
+\newblock ``{How to Position Buttons in Tkinter with Pack}.
 \newblock Accessed: 2025-02-14.
 
-\bibitem[\protect\citeauthoryear{}{NVIDIA}{2025}]{nvidia_box_filter}
-NVIDIA (2025).
-\newblock ``Box image filter, $<$https://docs.nvidia.com/vpi/algo_box_filter.html$>$.
+\bibitem[\protect\citeauthoryear{}{{Adrian Rosebrock}}{2015}]{rosebrock_sliding_windows}
+{Adrian Rosebrock} (2015).
+\newblock ``{Sliding Windows for Object Detection with Python and OpenCV}.
 \newblock Accessed: 2025-02-14.
 
-\bibitem[\protect\citeauthoryear{}{OpenCV}{2025}]{opencv_filtering}
-OpenCV (2025).
-\newblock ``Image filtering functions, $<$https://docs.opencv.org/3.4/d4/d86/group__imgproc__filter.html$>$.
+\bibitem[\protect\citeauthoryear{}{{Automatic Addison}}{2025}]{automaticaddison_sobel_operator}
+{Automatic Addison} (2025).
+\newblock ``{How the Sobel Operator Works}.
 \newblock Accessed: 2025-02-14.
 
-\bibitem[\protect\citeauthoryear{}{TutorialsPoint}{2025}]{tutorialspoint_opencv_tkinter}
-TutorialsPoint (2025).
-\newblock ``Read an image with opencv and display it with tkinter, $<$https://www.tutorialspoint.com/read-an-image-with-opencv-and-display-it-with-tkinter$>$.
+\bibitem[\protect\citeauthoryear{}{{GeeksforGeeks}}{2025}]{geeksforgeeks_sobel}
+{GeeksforGeeks} (2025).
+\newblock ``{Python Program to Detect the Edges of an Image using OpenCV | Sobel Edge Detection}.
+\newblock Accessed: 2025-02-16.
+
+\bibitem[\protect\citeauthoryear{}{{NVIDIA}}{2025}]{nvidia_box_filter}
+{NVIDIA} (2025).
+\newblock ``{Box Image Filter}.
 \newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{{OpenCV}}{2025a}]{opencv_gaussian_median_bilateral}
+{OpenCV} (2025a).
+\newblock ``{Gaussian, Median, and Bilateral Blurring}.
+\newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{{OpenCV}}{2025b}]{opencv_filtering}
+{OpenCV} (2025b).
+\newblock ``{Image Filtering Functions}.
+\newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{{TutorialsPoint}}{2025}]{tutorialspoint_opencv_tkinter}
+{TutorialsPoint} (2025).
+\newblock ``{Read an Image with OpenCV and Display it with Tkinter}.
+\newblock Accessed: 2025-02-14.
+
+\bibitem[\protect\citeauthoryear{}{{University of Edinburgh}}{2025}]{edinburgh_sobel}
+{University of Edinburgh} (2025).
+\newblock ``{Sobel Operator}.
+\newblock Accessed: 2025-02-16.
 
 \end{thebibliography}

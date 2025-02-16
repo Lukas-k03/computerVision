@@ -1,2 +1,24 @@
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Full Tkinter GUI}}{3}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Filter Dropdown Box}}{3}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Window Size Dropdown}}{3}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 3x3 Box Filter}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces 3x3 Box Filter Manual}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces 3x3 Gaussian}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 3x3 Sobel X}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces 3x3 Sobel X Manual}}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 3x3 Sobel XY}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces 3x3 Sobel XY Manual}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces 3x3 Sobel Y}}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces 3x3 Sobel Y Manual}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces 5x5 Box Filter}}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces 5x5 Box Filter Manual}}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces 5x5 Gaussian}}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces 5x5 Sobel X}}{12}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces 5x5 Sobel X Manual}}{13}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces 5x5 Sobel XY}}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces 5x5 Sobel XY Manual}}{13}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces 5x5 Sobel Y}}{14}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces 5x5 Sobel Y Manual}}{14}{figure.caption.23}%
 \contentsfinish 

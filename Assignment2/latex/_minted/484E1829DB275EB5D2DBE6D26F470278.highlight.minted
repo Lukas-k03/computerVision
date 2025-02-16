@@ -1,5 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{}create sliderbar for brightness and contrast}
-\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{createTrackbar}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Brightness}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{WINDOWNAME}\PYG{p}{,} \PYG{l+m+mi}{128}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{n}{adjust\PYGZus{}brightness}\PYG{p}{)}
-\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{createTrackbar}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Contrast}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{WINDOWNAME}\PYG{p}{,} \PYG{l+m+mi}{128}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{n}{adjust\PYGZus{}contrast}\PYG{p}{)}
-\end{MintedVerbatim}

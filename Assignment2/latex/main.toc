@@ -1,6 +1,15 @@
 \contentsline {chapter}{Contents}{ii}{section*.1}%
 \contentsline {chapter}{List of Figures}{iii}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {subsection}{\numberline {1.0.1}Background of Manual Calculation of Box Filter}{1}{subsection.1.0.1}%
-\contentsline {chapter}{References}{2}{chapter*.4}%
+\contentsline {chapter}{\numberline {2}Implementation}{2}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Explanation Of Tkinter GUI to Usable CV2 Images}{2}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Explanation Of Tkinter GUI}{2}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Explanation Manual Calculation of Box Filter}{5}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Explanation Of Calculation of Box Filter (CV2)}{5}{subsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.0.5}Explanation of Manual Sobel Filter X and Y}{6}{subsection.2.0.5}%
+\contentsline {subsection}{\numberline {2.0.6}Explanation of Sobel Filter X and Y (CV2)}{7}{subsection.2.0.6}%
+\contentsline {subsection}{\numberline {2.0.7}Explanation of Guassian Filter (CV2)}{8}{subsection.2.0.7}%
+\contentsline {subsection}{\numberline {2.0.8}Output Figuires}{8}{subsection.2.0.8}%
+\contentsline {subsection}{\numberline {2.0.9}Discussion}{14}{subsection.2.0.9}%
+\contentsline {chapter}{References}{16}{chapter*.24}%
 \contentsfinish 

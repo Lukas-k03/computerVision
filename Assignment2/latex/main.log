@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.24)  15 FEB 2025 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.24)  16 FEB 2025 17:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -539,8 +539,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 10.
 LaTeX Font Info:    Trying to load font information for OT1+Crlt-OsF on input line 13.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/carlito/OT1Crlt-OsF.fd
 File: OT1Crlt-OsF.fd 2022/10/05 (autoinst) Font definitions for OT1/Crlt-OsF.
-)
-No file main.aux.
+) (./main.aux (./Title.aux) (./Chapter_01.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -561,7 +560,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count352
 \scratchdimen=\dimen272
@@ -622,19 +621,19 @@ Package caption Info: End \AtBeginDocument code.
 \c@mv@tabular=\count358
 \c@mv@boldtabular=\count359
 Package hyperref Info: Link coloring ON on input line 13.
+(./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 \openout2 = `Title.aux'.
 
-(./Title.tex)
+ (./Title.tex)
 
 [1
 
 
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/carlito/crlt_zisnlb.enc}]
-No file main.toc.
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/carlito/crlt_zisnlb.enc}] (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -645,8 +644,15 @@ No file main.toc.
 
 
 
-]
-No file main.lof.
+] (./main.lof
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -661,223 +667,274 @@ No file main.lof.
  (./Chapter_01.tex
 Chapter 1.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 8.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
 
 [1
 
 
 
-] (./main.bbl
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 5.
+]
+Chapter 2.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 10.
+
+\pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write7
+\openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
+
+runsystem(latexminted config  --timestamp 20250216171421 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+(./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20250216171421 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./_minted/default.style.minted) (./_minted/459629793835ED1E6D61426D95BDBBE3.highlight.minted)
+<figuire1.png, id=135, 976.64874pt x 807.015pt>
+File: figuire1.png Graphic file (type png)
+<use figuire1.png>
+Package pdftex.def Info: figuire1.png  used on input line 27.
+(pdftex.def)             Requested size: 450.96797pt x 372.64752pt.
+<figuire2.png, id=137, 213.79875pt x 180.675pt>
+File: figuire2.png Graphic file (type png)
+<use figuire2.png>
+Package pdftex.def Info: figuire2.png  used on input line 36.
+(pdftex.def)             Requested size: 225.4804pt x 190.5469pt.
+<figuire3.png, id=138, 211.79124pt x 186.6975pt>
+File: figuire3.png Graphic file (type png)
+<use figuire3.png>
+Package pdftex.def Info: figuire3.png  used on input line 43.
+(pdftex.def)             Requested size: 225.4804pt x 198.77296pt.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 5.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 5.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+(./_minted/3E0C2630297D7040C99752051FBD2D46.highlight.minted
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
 
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 5.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-[]\OT1/Crlt-OsF/m/n/11 ActiveState (2025).  ``How to po-si-tion but-tons in tk-in-ter with pack,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-\OML/cmm/m/it/10.95 <$\OT1/Crlt-OsF/m/n/11 https://www.activestate.com/resources/quick-reads/how-to-position-buttons-in-tkinter-with-
- []
-
-./main.bbl:10: Missing $ inserted.
-<inserted text> 
-                $
-l.10 ...lter, $<$https://docs.nvidia.com/vpi/algo_
-                                                  box_filter.html$>$.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.bbl:12: Missing $ inserted.
-<inserted text> 
-                $
-l.12 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.bbl:12: Missing } inserted.
-<inserted text> 
-                }
-l.12 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./main.bbl:12: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.12 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./main.bbl:15: Missing $ inserted.
-<inserted text> 
-                $
-l.15 ...$https://docs.opencv.org/3.4/d4/d86/group_
-                                                  _imgproc__filter.html$>$.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.bbl:15: Missing { inserted.
-<to be read again> 
-                   _
-l.15 ...https://docs.opencv.org/3.4/d4/d86/group__
-                                                  imgproc__filter.html$>$.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./main.bbl:15: Missing { inserted.
-<to be read again> 
-                   _
-l.15 ...ocs.opencv.org/3.4/d4/d86/group__imgproc__
-                                                  filter.html$>$.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./main.bbl:15: Missing } inserted.
-<inserted text> 
-                }
-l.15 ...rg/3.4/d4/d86/group__imgproc__filter.html$
-                                                  >$.
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./main.bbl:15: Missing } inserted.
-<inserted text> 
-                }
-l.15 ...rg/3.4/d4/d86/group__imgproc__filter.html$
-                                                  >$.
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./main.bbl:17: Missing $ inserted.
-<inserted text> 
-                $
-l.17 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.bbl:17: Missing } inserted.
-<inserted text> 
-                }
-l.17 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (36.33267pt too wide) in paragraph at lines 14--17
-[]\OT1/Crlt-OsF/m/n/11 OpenCV (2025).  ``Im-age fil-ter-ing func-tions, $\OML/cmm/m/it/10.95 <$\OT1/Crlt-OsF/m/n/11 https://docs.opencv.org/3.4/d4/d86/group$[]$>$\OML/cmm/m/it/10.95 : Accessed \OT1/cmr/m/n/10.95 :
- []
-
-./main.bbl:17: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.17 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--22
-[]\OT1/Crlt-OsF/m/n/11 TutorialsPoint (2025).  ``Read an im-age with opencv and dis-play it with tk-in-ter,
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 19--22
-\OML/cmm/m/it/10.95 <$\OT1/Crlt-OsF/m/n/11 https://www.tutorialspoint.com/read-an-image-with-opencv-and-display-it-with-tkinter$\OML/cmm/m/it/10.95 >$\OT1/Crlt-OsF/m/n/11 .  Ac-cessed:
- []
-
-)
 
 [2
 
+]
+Overfull \vbox (16.59047pt too high) has occurred while \output is active []
 
 
-] (./main.aux (./Title.aux) (./Chapter_01.aux)
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+[3 <./figuire1.png> <./figuire2.png> <./figuire3.png>]
 
-)
+[4]) (./_minted/47C9118B7D7DA27A7B9A82F93F092057.highlight.minted) (./_minted/8438BEFD03678FB01B91088E46D0E575.highlight.minted
+
+[5]) (./_minted/E3347E1C51C2F88F761E883DA1B91351.highlight.minted
+
+[6]) (./_minted/20B02A5E68F838DE47C1516648BEB0FB.highlight.minted) (./_minted/EDB1E567EC2DA0CDC258F2C4E52FE75C.highlight.minted
+
+[7]) (./_minted/27DD5B98FE1C971AFC99856DBEDB4424.highlight.minted)
+<3x3BoxFilter.png, id=185, 960.58875pt x 362.35374pt>
+File: 3x3BoxFilter.png Graphic file (type png)
+<use 3x3BoxFilter.png>
+Package pdftex.def Info: 3x3BoxFilter.png  used on input line 269.
+(pdftex.def)             Requested size: 469.75502pt x 177.20102pt.
+<3x3BoxFilterManual.png, id=186, 957.5775pt x 364.36125pt>
+File: 3x3BoxFilterManual.png Graphic file (type png)
+<use 3x3BoxFilterManual.png>
+Package pdftex.def Info: 3x3BoxFilterManual.png  used on input line 276.
+(pdftex.def)             Requested size: 469.75502pt x 178.74428pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3Guassian.png, id=187, 962.59625pt x 366.36874pt>
+File: 3x3Guassian.png Graphic file (type png)
+<use 3x3Guassian.png>
+Package pdftex.def Info: 3x3Guassian.png  used on input line 283.
+(pdftex.def)             Requested size: 469.75502pt x 178.78992pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3SobelX.png, id=188, 958.58125pt x 366.36874pt>
+File: 3x3SobelX.png Graphic file (type png)
+<use 3x3SobelX.png>
+Package pdftex.def Info: 3x3SobelX.png  used on input line 290.
+(pdftex.def)             Requested size: 469.75502pt x 179.53902pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3SobelXManual.png, id=189, 961.5925pt x 365.365pt>
+File: 3x3SobelXManual.png Graphic file (type png)
+<use 3x3SobelXManual.png>
+Package pdftex.def Info: 3x3SobelXManual.png  used on input line 297.
+(pdftex.def)             Requested size: 469.75502pt x 178.48964pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3SobelXY.png, id=190, 956.57375pt x 361.35pt>
+File: 3x3SobelXY.png Graphic file (type png)
+<use 3x3SobelXY.png>
+Package pdftex.def Info: 3x3SobelXY.png  used on input line 304.
+(pdftex.def)             Requested size: 469.75502pt x 177.449pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3SobelXYManual.png, id=191, 959.585pt x 368.37625pt>
+File: 3x3SobelXYManual.png Graphic file (type png)
+<use 3x3SobelXYManual.png>
+Package pdftex.def Info: 3x3SobelXYManual.png  used on input line 311.
+(pdftex.def)             Requested size: 469.75502pt x 180.3373pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3SobelY.png, id=192, 964.60374pt x 368.37625pt>
+File: 3x3SobelY.png Graphic file (type png)
+<use 3x3SobelY.png>
+Package pdftex.def Info: 3x3SobelY.png  used on input line 318.
+(pdftex.def)             Requested size: 469.75502pt x 179.39297pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<3x3SobelYManual.png, id=193, 957.5775pt x 361.35pt>
+File: 3x3SobelYManual.png Graphic file (type png)
+<use 3x3SobelYManual.png>
+Package pdftex.def Info: 3x3SobelYManual.png  used on input line 325.
+(pdftex.def)             Requested size: 469.75502pt x 177.26706pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5BoxFilter.png, id=194, 963.6pt x 364.36125pt>
+File: 5x5BoxFilter.png Graphic file (type png)
+<use 5x5BoxFilter.png>
+Package pdftex.def Info: 5x5BoxFilter.png  used on input line 333.
+(pdftex.def)             Requested size: 469.75502pt x 177.62677pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5BoxFilterManual.png, id=195, 959.585pt x 366.36874pt>
+File: 5x5BoxFilterManual.png Graphic file (type png)
+<use 5x5BoxFilterManual.png>
+Package pdftex.def Info: 5x5BoxFilterManual.png  used on input line 340.
+(pdftex.def)             Requested size: 469.75502pt x 179.35454pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5Guassian.png, id=196, 960.58875pt x 365.365pt>
+File: 5x5Guassian.png Graphic file (type png)
+<use 5x5Guassian.png>
+Package pdftex.def Info: 5x5Guassian.png  used on input line 347.
+(pdftex.def)             Requested size: 469.75502pt x 178.67361pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5SobelX.png, id=197, 956.57375pt x 361.35pt>
+File: 5x5SobelX.png Graphic file (type png)
+<use 5x5SobelX.png>
+Package pdftex.def Info: 5x5SobelX.png  used on input line 354.
+(pdftex.def)             Requested size: 469.75502pt x 177.449pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5SobelXManual.png, id=198, 959.585pt x 367.3725pt>
+File: 5x5SobelXManual.png Graphic file (type png)
+<use 5x5SobelXManual.png>
+Package pdftex.def Info: 5x5SobelXManual.png  used on input line 361.
+(pdftex.def)             Requested size: 469.75502pt x 179.84592pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5SobelXY.png, id=199, 975.645pt x 374.39874pt>
+File: 5x5SobelXY.png Graphic file (type png)
+<use 5x5SobelXY.png>
+Package pdftex.def Info: 5x5SobelXY.png  used on input line 368.
+(pdftex.def)             Requested size: 422.77664pt x 162.23943pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5SobelXYManual.png, id=200, 959.585pt x 364.36125pt>
+File: 5x5SobelXYManual.png Graphic file (type png)
+<use 5x5SobelXYManual.png>
+Package pdftex.def Info: 5x5SobelXYManual.png  used on input line 375.
+(pdftex.def)             Requested size: 469.75502pt x 178.37178pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5SobelY.png, id=201, 966.61125pt x 368.37625pt>
+File: 5x5SobelY.png Graphic file (type png)
+<use 5x5SobelY.png>
+Package pdftex.def Info: 5x5SobelY.png  used on input line 382.
+(pdftex.def)             Requested size: 469.75502pt x 179.022pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<5x5SobelYManual.png, id=202, 967.615pt x 361.35pt>
+File: 5x5SobelYManual.png Graphic file (type png)
+<use 5x5SobelYManual.png>
+Package pdftex.def Info: 5x5SobelYManual.png  used on input line 389.
+(pdftex.def)             Requested size: 469.75502pt x 175.42546pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[8 <./3x3BoxFilter.png>]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+
+
+[9 <./3x3BoxFilterManual.png> <./3x3Guassian.png> <./3x3SobelX.png>]
+
+LaTeX Warning: Text page 10 contains only floats.
+
+
+
+[10 <./3x3SobelXManual.png> <./3x3SobelXY.png> <./3x3SobelXYManual.png>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+
+
+[11 <./3x3SobelY.png> <./3x3SobelYManual.png> <./5x5BoxFilter.png>]
+
+LaTeX Warning: Text page 12 contains only floats.
+
+
+
+[12 <./5x5BoxFilterManual.png> <./5x5Guassian.png> <./5x5SobelX.png>]
+
+LaTeX Warning: Text page 13 contains only floats.
+
+
+
+[13 <./5x5SobelXManual.png> <./5x5SobelXY.png> <./5x5SobelXYManual.png>])
+
+[14 <./5x5SobelY.png> <./5x5SobelYManual.png>]
+
+[15] (./main.bbl)
+
+[16
+
+
+
+] (./main.aux (./Title.aux) (./Chapter_01.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.5pt have occurred.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  5029EDB253C381F3A1FD4623DB9B2D9B;713.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: A7A980889BCE52644E56950B0869B905;2785.
  ) 
 Here is how much of TeX's memory you used:
- 19903 strings out of 473207
- 372899 string characters out of 5716282
- 969936 words of memory out of 5000000
- 42830 multiletter control sequences out of 15000+600000
- 597412 words of font info for 77 fonts, out of 8000000 for 9000
+ 20547 strings out of 473207
+ 388226 string characters out of 5716282
+ 991357 words of memory out of 5000000
+ 43370 multiletter control sequences out of 15000+600000
+ 604630 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,117p,604b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (5 pages, 164054 bytes).
+ 94i,11n,117p,1324b,1115s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (19 pages, 49043625 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

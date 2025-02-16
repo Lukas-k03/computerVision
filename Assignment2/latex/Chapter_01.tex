@@ -1,23 +1,399 @@
 \chapter{Introduction}
 
 %-------------------------------------------------------
-This Assignment 
+This assignment was to apply different image filters to images. To do that, we coded filters manually and used OpenCV's own functions. The task was to implement a Box Filter, to apply Sobel Filters to identify edges on the X-axis and on the Y-axis, and to implement a Gaussian Filter. First, we implemented the Box Filter manually, and then used OpenCV to implement it for us. We implemented the Sobel Filters manually to identify edges on the X-axis where these edges intersect and on the Y-axis where these edges intersect. We implemented these filters with windows of size 3x3 and windows of size 5x5 to see how these altered image quality as well as edge detection. We implemented the Gaussian Filter through OpenCV to compare it to ones implemented by us manually. After applying all these filters to given images, we presented output images as well as a detailed report. This report contained details of windows used as well as how exactly convolution was performed the program. The report displays how good or bad each filter performed in its task. Overall, through this experience, we learned how to implement filters, handle images, and implement OpenCV and Tkinter for general-purpose work on images.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SUBSECTION NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Background of Manual Calculation of Box Filter}
-A Box Filter can be denfined as the Kernel Matrix Equation below where M is the width of the filter and N is the height of the filter
-\[
-\text{box}_{m,n} = \frac{1}{mn}
-\begin{bmatrix}
-1 & 1 & 1 & \dots & 1 \\
-1 & 1 & 1 & \dots & 1 \\
-\vdots & \vdots & \vdots & \ddots & \vdots \\
-1 & 1 & 1 & \dots & 1
-\end{bmatrix}_{m \times n}
-\]
-This can be applied to an image using convolution as discussed in lecture, Basically we can go pixel by pixel and apply the constant to each pixel and the average of its neighborhs
-\[
-I_{\text{filtered}} = I * \text{box}_{m,n} = \sum_{i=0}^{m-1} \sum_{j=0}^{n-1} I(x-i, y-j) \cdot \frac{1}{mn}
-\]
 
+\chapter{Implementation}
+\subsection{Explanation Of Tkinter GUI to Usable CV2 Images}
+In order to calculate any type of filter or computation on an image and display it using Tkinter we need to convert the CV2 read image into a Tkinter display image. When CV2 reads an image it uses a numPY array to store the values. In order for Tkinter to be able to read and display the image we need to convert its color space from Blue Green Red to Red Green Blue and convert its data type from numPY array to Tkinter photoImage. To facilitate the conversion from numPY array to Tkinter Photoimage we can use the Pillow library, this acts as the intermediate between them.
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    #convert OpenCV image (BGR) to (RGB) format
+    stackConvert1 = cv2.cvtColor(stack1, cv2.COLOR_BGR2RGB)
+    stackConvert2 = cv2.cvtColor(stack2, cv2.COLOR_BGR2RGB)
+    #convert the initial image to a format for Tkinter after the root window is created
+    photo1 = ImageTk.PhotoImage(Image.fromarray(stackConvert1))
+    photo2 = ImageTk.PhotoImage(Image.fromarray(stackConvert2))
+    #Tkinter display and pac
+    imageTop = tk.Label(root, image=photo1)
+    imageTop.pack(padx=10, pady=10)
+\end{minted}
+\subsection{Explanation Of Tkinter GUI}
+For this project Tkinter GUI was the best option to be used. It allows all the images and options to be in one window instead of separate ones. Below is the full screenshot of the Tkinter GUI made for this Assignment, the bottom left features two drop boxes. The left one allows you to select what type of filter you want to apply to the image. The dropbox to the right of it lets you select a 3x3 or 5x5 sliding window. The apply button will apply the filter to the bottom image changing it to reflect the filter you selected. The close button will quit out of the app and the reset button will reset the bottom image to the original image. Tkinter only had a slight learning curve compared to using npStack, but it turned out to be a better option because of its look and ease of use with the options we needed.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = .96\textwidth]{figuire1.png}
+    \caption[Full Tkinter GUI]%
+    {Full Tkinter GUI} 
+    \label{fig:exA}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuire2.png}
+        \caption[Filter Dropdown Box]{Filter Dropdown Box}
+        \label{fig:exB}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuire3.png}
+        \caption[Window Size Dropdown]{Window Size Dropdown}
+        \label{fig:exC}
+    \end{minipage}
+\end{figure}
+
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+#filter functoin
+def applyFilter():
+    selectedFilter = filterCombo.get()
+    if selectedFilter == "Box Filter (Manual)":
+        boxFilterManual(photo2)
+    elif selectedFilter == "Box Filter":
+        boxFilter(photo2)
+    elif selectedFilter == "Sobel X Manual Filter":
+        sobelFilterXManual(photo2)
+    elif selectedFilter == "Sobel Y Manual Filter":
+        sobelFilterYManual(photo2)
+    elif selectedFilter == "Sobel X Filter":
+        sobelFilterX(photo2)
+    elif selectedFilter == "Sobel Y Filter":
+        sobelFilterY(photo2)
+    elif selectedFilter == "Sobel XY Manual Filter":
+        sobelFilterXYManual(photo2)
+    elif selectedFilter == "Sobel XY Filter":
+        sobelFilterXY(photo2)
+    elif selectedFilter == "Guassian Filter":
+        guassianFilter(photo2)
+
+#create a dropdown menu for filter selection
+filterCombo = ttk.Combobox(root, values=[
+    "Box Filter (Manual)",
+    "Box Filter",
+    "Sobel X Filter (Manual)",
+    "Sobel Y Filter (Manual)",
+    "Sobel X Filter",
+    "Sobel Y Filter",
+    "Sobel XY Filter (Manual)",
+    "Sobel XY Filter",
+    "Guassian Filter"
+], state="readonly")
+
+filterCombo.set("Box Filter")
+filterCombo.pack(side=tk.LEFT, pady=10)
+
+#dropdown for filter dimension
+combo = ttk.Combobox(root, values=['3x3', '5x5'], state="readonly")
+combo.set('3x3')  # default value
+combo.pack(side = tk.LEFT,pady=10)
+
+#Apply button
+applyButton = tk.Button(root, text="Apply", command=applyFilter)
+applyButton.pack(side=tk.LEFT, pady=10)
+
+#Buttons
+closeButton = tk.Button(root, text="Close", command=root.quit)
+closeButton.pack(side = tk.LEFT, pady=10)
+resetButton = tk.Button(root, text="Reset", command=reset)
+resetButton.pack(side = tk.LEFT, pady=10)
+# Run the Tkinter window
+root.mainloop()
+\end{minted}
+\subsection{Explanation Manual Calculation of Box Filter}
+A Box Filter can be defined as the Kernel Matrix Equation (1.1) below where K is the size of the kernel and an odd number. The filtered output image can be defined as the convolution of the current image with the Kernel (1.2)
+
+\begin{equation}
+    \text{box}_{(2k+1),(2k+1)} = \frac{1}{(2k+1)(2k+1)}
+    \begin{bmatrix}
+    1 & 1 & 1 & \dots & 1 \\
+    1 & 1 & 1 & \dots & 1 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & 1 & 1 & \dots & 1
+    \end{bmatrix}_{(2k+1) \times (2k+1)}
+    \label{eq:box_filter}
+    \end{equation}
+    
+    \begin{equation}
+    I_{\text{filtered}} = I * \text{box}_{(2k+1),(2k+1)} = \sum_{i=0}^{2k} \sum_{j=0}^{2k} I(x-i, y-j) \cdot \frac{1}{(2k+1)(2k+1)}
+    \label{eq:filtered_image}
+\end{equation}
+To implement this on our image we can simply transcribe the summation into a nested for loop, and then have it loop for each color channel. 
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    # Box filter summation
+    for y in range(height):
+        for x in range(width):
+            # Channels represent each color, so we go color by color (3)
+            for c in range(channels):
+                # Get kernel window for averaging
+                # y:y gets from the current pixel to the kernel size
+                window = paddedImage[y:y + dimension, x:x + dimension, c]
+                # Compute the mean value for the pixel by using sum of the window with the kernel
+                filteredImage[y, x, c] = np.sum(window * kernel)
+\end{minted}
+For every Y pixel than for every X pixel and then for every color (3) a KxK sliding window applys the Box Filter (Average) to the unflitered image.
+\subsection{Explanation Of Calculation of Box Filter (CV2)}
+The same idea applies as the previous section, but in this case we don't need to manually compute the values we can use the built in OpenCV function to calculate the filter. Which is much quicker than the manual calculation, Since it is probably designed to be less computationally intensive.
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    # Apply box filter
+    filteredImage = cv2.boxFilter(imageNP, -1, (dimension, dimension))
+\end{minted}
+\subsection{Explanation of Manual Sobel Filter X and Y}
+The same principle for applying the Box filter can be used to apply the Sobel filter, instead the Sobel filter is broken into X edge detection (2.3 / 2.6) and Y edge detection (2.4 / 2.7)
+\begin{equation}
+    \begin{array}{cc}
+        G_x^{3 \times 3} = 
+        \begin{bmatrix}
+        -1 & 0 & +1 \\
+        -2 & 0 & +2 \\
+        -1 & 0 & +1
+        \end{bmatrix} 
+        &
+        G_y^{3 \times 3} = 
+        \begin{bmatrix}
+        -1 & -2 & -1 \\
+        0  & 0  & 0  \\
+        +1 & +2 & +1
+        \end{bmatrix} 
+    \end{array}
+    \label{eq:gx_gy_3x3}
+\end{equation}
+
+\begin{equation}
+    \begin{array}{cc}
+        G_x^{5 \times 5} = 
+        \begin{bmatrix}
+        -2 & -3 & -4 & -3 & -2 \\
+        -1 & -2 & -3 & -2 & -1 \\
+        0  & 0  & 0  & 0  & 0  \\
+        +1 & +2 & +3 & +2 & +1 \\
+        +2 & +3 & +4 & +3 & +2
+        \end{bmatrix} 
+        &
+        G_y^{5 \times 5} = 
+        \begin{bmatrix}
+        -2 & -1 & 0  & +1 & +2 \\
+        -3 & -2 & 0  & +2 & +3 \\
+        -4 & -3 & 0  & +3 & +4 \\
+        -3 & -2 & 0  & +2 & +3 \\
+        -2 & -1 & 0  & +1 & +2
+        \end{bmatrix}
+    \end{array}
+    \label{eq:gx_gy_5x5}
+\end{equation}
+\begin{equation}
+    I_{\text{filtered}} = I * (G_x^{5 \times 5} + G_y^{5 \times 5}) = I * (G_x^{3 \times 3} + G_y^{3 \times 3})
+    \label{eq:filtered_image_gx_5x5}
+\end{equation}
+For an image $I(x, y)$, the gradient in the $x$ and $y$ directions are computed as:
+\[
+G_x = I * K_x, \quad G_y = I * K_y
+\]
+The gradient magnitude is then given by:
+\[
+G = \sqrt{G_x^2 + G_y^2}
+\]
+Which is the final image of both the X and Y direction filters
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    #define Sobel X and Y kernels
+    if dimension == 3:
+        kernelX = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+        kernelY = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+    elif dimension == 5:
+        kernelX = np.array([[-2, -1, 0, 1, 2],
+                            [-3, -2, 0, 2, 3],
+                            [-4, -3, 0, 3, 4],
+                            [-3, -2, 0, 2, 3],
+                            [-2, -1, 0, 1, 2]])
+        
+        kernelY = np.array([[-2, -3, -4, -3, -2],
+                            [-1, -2, -3, -2, -1],
+                            [ 0,  0,  0,  0,  0],
+                            [ 1,  2,  3,  2,  1],
+                            [ 2,  3,  4,  3,  2]])
+    pad = dimension // 2
+    paddedImage = cv2.copyMakeBorder(imageNP, pad, pad, pad, pad, cv2.BORDER_REFLECT)
+
+    #Apply Sobel filter in X and Y directions
+    for y in range(height):
+        for x in range(width):
+            for c in range(channels):
+                window = paddedImage[y:y + dimension, x:x + dimension, c]
+                Gx = np.sum(window * kernelX)
+                Gy = np.sum(window * kernelY)
+                #Compute gradient magnitude
+                filteredImage[y, x, c] = np.sqrt(Gx**2 + Gy**2)
+    return
+\end{minted}
+Just X direction and just Y direction have the same principle, but the execution only applies for one of each of the kernels and there is no need to compute the magnituide.
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    #box filter summation
+    for y in range(height):
+        for x in range(width):
+            #channels repersent each color so we can go color by color (3)
+            for c in range(channels):
+                #get kernel window for average Y:Y gets from the current pixel to the kernel size
+                window = paddedImage[y:y + dimension, x:x + dimension, c]
+                # Compute the mean value for the pixel by using sum of the window with the kernel
+                filteredImage[y, x, c] = np.sum(window * kernelY)
+                    #box filter summation
+    for y in range(height):
+        for x in range(width):
+            #channels repersent each color so we can go color by color (3)
+            for c in range(channels):
+                #get kernel window for average Y:Y gets from the current pixel to the kernel size
+                window = paddedImage[y:y + dimension, x:x + dimension, c]
+                # Compute the mean value for the pixel by using sum of the window with the kernel
+                filteredImage[y, x, c] = np.sum(window * kernelX)
+\end{minted}
+\subsection{Explanation of Sobel Filter X and Y (CV2)}
+Applying the Sobel filter using the built-in openCV command is much easier then doing it mannually. To apply just to the X direction we can change the dx option = 1 and dy option = 0. To apply to the Y direction we can do the oppisite. To apply both X and Y direction filter we can make both = 1
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    filteredImage = cv2.Sobel(imageNP, cv2.CV_64F, dx=0, dy=1, ksize=dimension)
+    or
+    filteredImage = cv2.Sobel(imageNP, cv2.CV_64F, dx=1, dy=0, ksize=dimension)
+    or
+    filteredImage = cv2.Sobel(imageNP, cv2.CV_64F, dx=1, dy=1, ksize=dimension)
+\end{minted}
+\subsection{Explanation of Guassian Filter (CV2)}
+The same principles of applying the other filters discussed can be used to apply the Guassian Filter.
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    filteredImage = cv2.GaussianBlur(imageNP, (dimension, dimension), 0)
+\end{minted}
+\subsection{Output Figuires}
+% 3x3 Figures
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3BoxFilter.png}
+    \caption[3x3 Box Filter]{3x3 Box Filter}
+    \label{fig:3x3BoxFilter}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3BoxFilterManual.png}
+    \caption[3x3 Box Filter Manual]{3x3 Box Filter Manual}
+    \label{fig:3x3BoxFilterManual}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3Guassian.png}
+    \caption[3x3 Gaussian]{3x3 Gaussian}
+    \label{fig:3x3Gaussian}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3SobelX.png}
+    \caption[3x3 Sobel X]{3x3 Sobel X}
+    \label{fig:3x3SobelX}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3SobelXManual.png}
+    \caption[3x3 Sobel X Manual]{3x3 Sobel X Manual}
+    \label{fig:3x3SobelXManual}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3SobelXY.png}
+    \caption[3x3 Sobel XY]{3x3 Sobel XY}
+    \label{fig:3x3SobelXY}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3SobelXYManual.png}
+    \caption[3x3 Sobel XY Manual]{3x3 Sobel XY Manual}
+    \label{fig:3x3SobelXYManual}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3SobelY.png}
+    \caption[3x3 Sobel Y]{3x3 Sobel Y}
+    \label{fig:3x3SobelY}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{3x3SobelYManual.png}
+    \caption[3x3 Sobel Y Manual]{3x3 Sobel Y Manual}
+    \label{fig:3x3SobelYManual}
+\end{figure}
+
+% 5x5 Figures
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5BoxFilter.png}
+    \caption[5x5 Box Filter]{5x5 Box Filter}
+    \label{fig:5x5BoxFilter}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5BoxFilterManual.png}
+    \caption[5x5 Box Filter Manual]{5x5 Box Filter Manual}
+    \label{fig:5x5BoxFilterManual}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5Guassian.png}
+    \caption[5x5 Gaussian]{5x5 Gaussian}
+    \label{fig:5x5Gaussian}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5SobelX.png}
+    \caption[5x5 Sobel X]{5x5 Sobel X}
+    \label{fig:5x5SobelX}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5SobelXManual.png}
+    \caption[5x5 Sobel X Manual]{5x5 Sobel X Manual}
+    \label{fig:5x5SobelXManual}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = .90\textwidth]{5x5SobelXY.png}
+    \caption[5x5 Sobel XY]{5x5 Sobel XY}
+    \label{fig:5x5SobelXY}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5SobelXYManual.png}
+    \caption[5x5 Sobel XY Manual]{5x5 Sobel XY Manual}
+    \label{fig:5x5SobelXYManual}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5SobelY.png}
+    \caption[5x5 Sobel Y]{5x5 Sobel Y}
+    \label{fig:5x5SobelY}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 1\textwidth]{5x5SobelYManual.png}
+    \caption[5x5 Sobel Y Manual]{5x5 Sobel Y Manual}
+    \label{fig:5x5SobelYManual}
+\end{figure}
+\pagebreak[4]
+\subsection{Discussion}
+There were several issues in implementing the image filters and integrating them with the graphical interface. The most crucial among them was using OpenCV's Sobel function, i.e., type mismatch. The \texttt{cv2.Sobel()} function returns an image of type \texttt{np.float64} (\texttt{CV\_64}), while the \texttt{cv2.cvtColor} function requires the input to be of a different type, usually \texttt{np.uint8}. This inconsistency resulted in failures in transforming the processed image to display. The remedy was to specifically change the data type of the image after the application of the Sobel filter into what was necessary for color transform or display procedures.
+The second problem was with garbage collection, particularly when dealing with images in a Tkinter GUI. The image reference of the filtered image was not being retained properly, causing the image to disappear after being displayed. This was resolved by ensuring that the reference to the image was maintained by explicitly performing \texttt{imageBottom.image = filtered\_tk}. This prevents Python's garbage collector from eliminating the reference to the image, ensuring that it is visible in the Tkinter window.
+The functionality of the buttons within the graphical interface needed some debugging as well. That is, with \texttt{command=boxFilter(photo2)}, the function was being invoked immediately upon button setup rather than after the button click event. To correct this, a lambda function was created within the button's command parameter: \texttt{command=lambda: boxFilter(photo2)}. This was done so that the \texttt{boxFilter()} function was called only upon button click and not earlier.
+The other challenge was the variability in output quality between the manually implamented and OpenCV-generated filters. The manually implamented filters, although working, produced slightly more artifacted or noisier outputs than their equivalent OpenCV counterparts. This might have been due to variability in the implementation of the convolution operations, such as the handling of edge pixels or kernel normalization method employed. Additional optimization of the manual implementations might be necessary to match the results of OpenCV's optimized filters.
+Lastly, there were problems when preparing the images for display in Tkinter since Tkinter requires images to be in a format different from the default OpenCV image format. OpenCV shows images in a numpy array format, yet Tkinter requires images in a PhotoImage object. Image conversion from these formats to one another was required to facilitate the proper visualization within the GUI. This was achieved by converting the OpenCV image to a format suitable for Tkinter to display the image processing output within the graphical interface without any hindrance.

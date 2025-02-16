@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{n}{filteredImage} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{Sobel}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{CV\PYGZus{}64F}\PYG{p}{,} \PYG{n}{dx}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{dy}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{ksize}\PYG{o}{=}\PYG{n}{dimension}\PYG{p}{)}
+    \PYG{o+ow}{or}
+    \PYG{n}{filteredImage} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{Sobel}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{CV\PYGZus{}64F}\PYG{p}{,} \PYG{n}{dx}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{dy}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{ksize}\PYG{o}{=}\PYG{n}{dimension}\PYG{p}{)}
+    \PYG{o+ow}{or}
+    \PYG{n}{filteredImage} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{Sobel}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{CV\PYGZus{}64F}\PYG{p}{,} \PYG{n}{dx}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{dy}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{ksize}\PYG{o}{=}\PYG{n}{dimension}\PYG{p}{)}
+\end{MintedVerbatim}

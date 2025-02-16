@@ -1,0 +1,31 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{\PYGZsh{}define Sobel X and Y kernels}
+    \PYG{k}{if} \PYG{n}{dimension} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{n}{kernelX} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+        \PYG{n}{kernelY} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{dimension} \PYG{o}{==} \PYG{l+m+mi}{5}\PYG{p}{:}
+        \PYG{n}{kernelX} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+
+        \PYG{n}{kernelY} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[} \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[} \PYG{l+m+mi}{1}\PYG{p}{,}  \PYG{l+m+mi}{2}\PYG{p}{,}  \PYG{l+m+mi}{3}\PYG{p}{,}  \PYG{l+m+mi}{2}\PYG{p}{,}  \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}
+                            \PYG{p}{[} \PYG{l+m+mi}{2}\PYG{p}{,}  \PYG{l+m+mi}{3}\PYG{p}{,}  \PYG{l+m+mi}{4}\PYG{p}{,}  \PYG{l+m+mi}{3}\PYG{p}{,}  \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{pad} \PYG{o}{=} \PYG{n}{dimension} \PYG{o}{/}\PYG{o}{/} \PYG{l+m+mi}{2}
+    \PYG{n}{paddedImage} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{copyMakeBorder}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{pad}\PYG{p}{,} \PYG{n}{pad}\PYG{p}{,} \PYG{n}{pad}\PYG{p}{,} \PYG{n}{pad}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{BORDER\PYGZus{}REFLECT}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}Apply Sobel filter in X and Y directions}
+    \PYG{k}{for} \PYG{n}{y} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{height}\PYG{p}{)}\PYG{p}{:}
+        \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{width}\PYG{p}{)}\PYG{p}{:}
+            \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{channels}\PYG{p}{)}\PYG{p}{:}
+                \PYG{n}{window} \PYG{o}{=} \PYG{n}{paddedImage}\PYG{p}{[}\PYG{n}{y}\PYG{p}{:}\PYG{n}{y} \PYG{o}{+} \PYG{n}{dimension}\PYG{p}{,} \PYG{n}{x}\PYG{p}{:}\PYG{n}{x} \PYG{o}{+} \PYG{n}{dimension}\PYG{p}{,} \PYG{n}{c}\PYG{p}{]}
+                \PYG{n}{Gx} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{window} \PYG{o}{*} \PYG{n}{kernelX}\PYG{p}{)}
+                \PYG{n}{Gy} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{window} \PYG{o}{*} \PYG{n}{kernelY}\PYG{p}{)}
+                \PYG{c+c1}{\PYGZsh{}Compute gradient magnitude}
+                \PYG{n}{filteredImage}\PYG{p}{[}\PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{c}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{Gx}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2} \PYG{o}{+} \PYG{n}{Gy}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{)}
+    \PYG{k}{return}
+\end{MintedVerbatim}
