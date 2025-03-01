@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1739744060.92455 "main.aux" "main.bbl" "main" 1739744069.06542 0
+["bibtex main"] 1739744060.92455 "main.aux" "main.bbl" "main" 1739974557.32967 0
   "./references.bib" 1739738115.6326 2709 cb974411bf511e39df313502a0c329d6 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/ascelike/ascelike.bst" 1360972716 34611 d1ce19bd45ef870dc2144f49a75c5a21 ""
-  "Chapter_01.aux" 1739744068.69164 8147 e44257445954f453341f5713ac746e04 "pdflatex"
-  "Title.aux" 1739744061.66145 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
-  "main.aux" 1739744068.71092 1251 c447e4f906c13826c4dfea48cc2e6c23 "pdflatex"
+  "Chapter_01.aux" 1739974557.04209 8147 e44257445954f453341f5713ac746e04 "pdflatex"
+  "Title.aux" 1739974550.18995 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
+  "main.aux" 1739974557.06134 1251 c447e4f906c13826c4dfea48cc2e6c23 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1739744061.02154 "/Users/lkelk/Documents/GitHub/computerVision/Assignment2/latex/main.tex" "main.pdf" "main" 1739744069.06562 0
+["pdflatex"] 1739974549.5261 "/Users/lkelk/Documents/GitHub/computerVision/Assignment2/latex/main.tex" "main.pdf" "main" 1739974557.32986 0
   "/Users/lkelk/Documents/GitHub/computerVision/Assignment2/latex/main.tex" 1739557559.39789 848 960f75a7c7e58dbc529aeb04738b0d96 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/carlito/crlt_zisnlb.enc" 1664999222 3105 fe84215d6e1e68b95a7d9a8041ee418c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -179,9 +179,9 @@
   "5x5SobelXYManual.png" 1739741795.31507 2441682 808ab7fa283ac5e93fd3a780261e6cd8 ""
   "5x5SobelY.png" 1739741731.97334 2621342 be5f7e77f4872a6c2885d59297a90724 ""
   "5x5SobelYManual.png" 1739741641.5818 3268227 05ca13f1c731be4bd046f89e7ac60865 ""
-  "Chapter_01.aux" 1739744068.69164 8147 e44257445954f453341f5713ac746e04 "pdflatex"
-  "Chapter_01.tex" 1739744051.95655 19750 9698e9ff2d9835645a15a4b1cbca8d18 ""
-  "Title.aux" 1739744061.66145 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
+  "Chapter_01.aux" 1739974557.04209 8147 e44257445954f453341f5713ac746e04 "pdflatex"
+  "Chapter_01.tex" 1739974549.1714 19754 539eeb995c4df490012005908ab32ad7 ""
+  "Title.aux" 1739974550.18995 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
   "Title.tex" 1739720349.78212 1043 ad69bd22e035b289a7f86728094f8327 ""
   "_minted/20B02A5E68F838DE47C1516648BEB0FB.highlight.minted" 1739739911.13265 2407 1379da9d711a2410d7aaeea816846c7b ""
   "_minted/27DD5B98FE1C971AFC99856DBEDB4424.highlight.minted" 1739740371.54391 287 994c1ce559d4118abfcbf3f5928a8aea ""
@@ -197,12 +197,12 @@
   "figuire2.png" 1739738906.52636 118831 878a86d3936d138f984ab0adc568f0f6 ""
   "figuire3.png" 1739739001.15117 215690 05577314b0ce06139bf1636145a9bddc ""
   "formatting.sty" 1739557559.38155 6740 943436b24981ce1a084ad77f7950f8fe ""
-  "main.aux" 1739744068.71092 1251 c447e4f906c13826c4dfea48cc2e6c23 "pdflatex"
+  "main.aux" 1739974557.06134 1251 c447e4f906c13826c4dfea48cc2e6c23 "pdflatex"
   "main.bbl" 1739744061.01901 1818 cd9847604b0e29d163c5b049bfd8f387 "bibtex main"
-  "main.lof" 1739744068.7127 2104 fa50befcacee8e89fa9616217ac4f753 "pdflatex"
-  "main.out" 1739744068.71249 2785 a7a980889bce52644e56950b0869b905 "pdflatex"
+  "main.lof" 1739974557.06303 2104 fa50befcacee8e89fa9616217ac4f753 "pdflatex"
+  "main.out" 1739974557.06281 2785 a7a980889bce52644e56950b0869b905 "pdflatex"
   "main.tex" 1739557559.39789 848 960f75a7c7e58dbc529aeb04738b0d96 ""
-  "main.toc" 1739744068.71268 1257 e18dad3c388c7ced694628780c025be8 "pdflatex"
+  "main.toc" 1739974557.063 1257 e18dad3c388c7ced694628780c025be8 "pdflatex"
   (generated)
   "Chapter_01.aux"
   "Title.aux"
