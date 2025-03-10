@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}convert TKimage to a PIL Image}
+    \PYG{n}{image} \PYG{o}{=} \PYG{n}{ImageTk}\PYG{o}{.}\PYG{n}{getimage}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{}convert to numpy array}
+    \PYG{n}{imageNP} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{}convert color}
+    \PYG{n}{imageNP} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{cvtColor}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{COLOR\PYGZus{}RGB2BGR}\PYG{p}{)}
+\end{MintedVerbatim}

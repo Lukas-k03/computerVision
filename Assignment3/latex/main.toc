@@ -1,0 +1,12 @@
+\contentsline {chapter}{Contents}{ii}{section*.1}%
+\contentsline {chapter}{List of Figures}{iii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Implementation}{2}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Explanation Of Tkinter GUI to Usable CV2 Images}{2}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Explanation Of Tkinter GUI}{2}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Explanation Of Otsu Binary Thresholding}{5}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Explanation Of Otsu Multi-Thresholding}{7}{subsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.0.5}Explanation Of Mean Shift Segmentation}{8}{subsection.2.0.5}%
+\contentsline {subsection}{\numberline {2.0.6}Discussion}{9}{subsection.2.0.6}%
+\contentsline {chapter}{References}{11}{chapter*.15}%
+\contentsfinish 

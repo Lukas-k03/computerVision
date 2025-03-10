@@ -1,0 +1,53 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}create tkinter window}
+\PYG{n}{root} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Tk}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{root}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Assignment 3 App}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{imageT} \PYG{o}{=} \PYG{n}{imageB} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{imread}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Assignment3/Image1.png}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{photo1} \PYG{o}{=} \PYG{n}{ConvertCV2ToTKINTER}\PYG{p}{(}\PYG{n}{imageT}\PYG{p}{)}
+\PYG{n}{photo2} \PYG{o}{=} \PYG{n}{ConvertCV2ToTKINTER}\PYG{p}{(}\PYG{n}{imageB}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}label to display image}
+\PYG{n}{imageTop} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Label}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{image}\PYG{o}{=}\PYG{n}{photo1}\PYG{p}{)}
+\PYG{n}{imageTop}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{padx}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{imageBottom} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Label}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{image}\PYG{o}{=}\PYG{n}{photo2}\PYG{p}{)}
+\PYG{n}{imageBottom}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{padx}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}keeps image refernec so scope dosent destroy it}
+\PYG{n}{imageBottom}\PYG{o}{.}\PYG{n}{image} \PYG{o}{=} \PYG{n}{photo2}
+\PYG{n}{imageTop}\PYG{o}{.}\PYG{n}{image} \PYG{o}{=} \PYG{n}{photo1}
+
+\PYG{c+c1}{\PYGZsh{}create a dropdown menu for filter selection}
+\PYG{n}{filterCombo} \PYG{o}{=} \PYG{n}{ttk}\PYG{o}{.}\PYG{n}{Combobox}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Otsu Method (2 Classes)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Otsu Method (Many Classes)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Mean Shift Method}\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{p}{]}\PYG{p}{,} \PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{readonly}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{filterCombo}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Otsu Method (2 Classes)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{filterCombo}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side}\PYG{o}{=}\PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}bind filter selection event}
+\PYG{n}{filterCombo}\PYG{o}{.}\PYG{n}{bind}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}\PYGZlt{}ComboboxSelected\PYGZgt{}\PYGZgt{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{k}{lambda} \PYG{n}{event}\PYG{p}{:} \PYG{n}{updateGUI}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}dropdown for number of classes (Initially hidden)}
+\PYG{n}{classCombo} \PYG{o}{=} \PYG{n}{ttk}\PYG{o}{.}\PYG{n}{Combobox}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{readonly}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{classCombo}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{3}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Default to 3 classes}
+
+\PYG{c+c1}{\PYGZsh{}dropdown for filter dimension}
+\PYG{n}{combo} \PYG{o}{=} \PYG{n}{ttk}\PYG{o}{.}\PYG{n}{Combobox}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Image1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Image2}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Image3}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{readonly}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{combo}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Image1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{combo}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,}\PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{combo}\PYG{o}{.}\PYG{n}{bind}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}\PYGZlt{}ComboboxSelected\PYGZgt{}\PYGZgt{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{k}{lambda} \PYG{n}{event}\PYG{p}{:} \PYG{n}{changePIC}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZsh{}Buttons}
+\PYG{n}{applyButton} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Apply}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n}{applyFilter}\PYG{p}{)}
+\PYG{n}{applyButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side}\PYG{o}{=}\PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{resetButton} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Reset}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n}{changePIC}\PYG{p}{)}
+\PYG{n}{resetButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{closeButton} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Close}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n}{root}\PYG{o}{.}\PYG{n}{quit}\PYG{p}{)}
+\PYG{n}{closeButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{n}{side} \PYG{o}{=} \PYG{n}{tk}\PYG{o}{.}\PYG{n}{LEFT}\PYG{p}{,} \PYG{n}{pady}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}run the Tkinter window}
+\PYG{n}{root}\PYG{o}{.}\PYG{n}{mainloop}\PYG{p}{(}\PYG{p}{)}
+\end{MintedVerbatim}

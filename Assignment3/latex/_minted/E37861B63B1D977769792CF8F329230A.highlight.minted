@@ -1,0 +1,19 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{otsu2Classes}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}\PYG{p}{:}
+
+    \PYG{n}{imageNP} \PYG{o}{=} \PYG{n}{ConverTKINTERtoCV2}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}
+    \PYG{n}{gray} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{cvtColor}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{COLOR\PYGZus{}BGR2GRAY}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}this function automatically applies and calculates the threshold using cv2 methods}
+    \PYG{c+c1}{\PYGZsh{}the threeshold variable stores the actual value of the threshold}
+    \PYG{n}{threshold}\PYG{p}{,} \PYG{n}{filteredImage} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{threshold}\PYG{p}{(}\PYG{n}{gray}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{THRESH\PYGZus{}BINARY} \PYG{o}{+} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{THRESH\PYGZus{}OTSU}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}convert back to CV2}
+    \PYG{n}{filteredImage} \PYG{o}{=} \PYG{n}{ConvertCV2ToTKINTER}\PYG{p}{(}\PYG{n}{filteredImage}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{}update display and image}
+    \PYG{n}{imageBottom}\PYG{o}{.}\PYG{n}{config}\PYG{p}{(}\PYG{n}{image}\PYG{o}{=}\PYG{n}{filteredImage}\PYG{p}{)}
+    \PYG{n}{imageBottom}\PYG{o}{.}\PYG{n}{image} \PYG{o}{=} \PYG{n}{filteredImage}
+
+    \PYG{k}{return}
+\end{MintedVerbatim}

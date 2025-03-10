@@ -1,0 +1,83 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2025a}]{meanshift_geeksforgeeks}
+GeeksforGeeks (2025a).
+\newblock ``Image segmentation using mean shift clustering.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{GeeksforGeeks}{2025b}]{otsu_geeksforgeeks}
+GeeksforGeeks (2025b).
+\newblock ``Python | thresholding techniques using opencv (set 3: Otsu thresholding).
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{LearnOpenCV}{2025}]{otsu_learnopencv}
+LearnOpenCV (2025).
+\newblock ``Otsu thresholding with opencv.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{Madrigal}{2025}]{otsu_medium}
+Madrigal, R. (2025).
+\newblock ``Image segmentation using thresholding and otsu’s method.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{Matplotlib}{2025a}]{matplotlib_colormaps}
+Matplotlib (2025a).
+\newblock ``Colormap reference.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{Matplotlib}{2025b}]{colormap_youtube}
+Matplotlib (2025b).
+\newblock ``Matplotlib tutorial: How to use colormaps.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{of~Bonn}{2025}]{segmentation_bonn}
+of~Bonn, U. (2025).
+\newblock ``Segmentation lecture slides.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{{OpenCV}}{2025}]{opencv_thresholding}
+{OpenCV} (2025).
+\newblock ``{Image Thresholding in OpenCV}.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{OpenCV}{2025a}]{meanshift_opencv}
+OpenCV (2025a).
+\newblock ``Mean shift and camshift.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{OpenCV}{2025b}]{meanshift_opencv34}
+OpenCV (2025b).
+\newblock ``Mean shift and camshift (opencv 3.4).
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{OpenCV}{2025c}]{opencv_github}
+OpenCV (2025c).
+\newblock ``Opencv github repository.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{Overflow}{2025}]{multiotsu_stackoverflow}
+Overflow, S. (2025).
+\newblock ``Applying multi-otsu threshold for my image.
+\newblock Accessed: 2025-03-04.
+
+\bibitem[\protect\citeauthoryear{}{PyImageSearch}{2025}]{thresholding_pyimagesearch}
+PyImageSearch (2025).
+\newblock ``Opencv thresholding: cv2.threshold().
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{Scikit-Image}{2025}]{multiotsu_scikitimage}
+Scikit-Image (2025).
+\newblock ``Multi-otsu thresholding example.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{{TutorialsPoint}}{2025}]{tutorialspoint_combobox}
+{TutorialsPoint} (2025).
+\newblock ``{Combobox Widget in Python Tkinter}.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[\protect\citeauthoryear{}{with Python}{2025}]{otsu_youtube}
+with Python, C.~V. (2025).
+\newblock ``Otsu thresholding - full tutorial (opencv).
+\newblock Accessed: 2025-03-01.
+
+\end{thebibliography}
