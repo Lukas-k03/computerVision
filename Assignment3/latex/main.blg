@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Title.aux
+A level-1 auxiliary file: Chapter_01.aux
+The style file: ascelike.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: references.bib
+Warning--empty journal in meanshift_geeksforgeeks
+Warning--empty journal in otsu_geeksforgeeks
+Warning--empty journal in otsu_learnopencv
+Warning--empty journal in otsu_medium
+Warning--empty journal in matplotlib_colormaps
+Warning--empty journal in colormap_youtube
+Warning--empty journal in segmentation_bonn
+Warning--empty journal in opencv_thresholding
+Warning--empty journal in meanshift_opencv
+Warning--empty journal in meanshift_opencv34
+Warning--empty journal in opencv_github
+Warning--empty journal in multiotsu_stackoverflow
+Warning--empty journal in thresholding_pyimagesearch
+Warning--empty journal in multiotsu_scikitimage
+Warning--empty journal in tutorialspoint_combobox
+Warning--empty journal in otsu_youtube
+You've used 16 entries,
+            2831 wiz_defined-function locations,
+            664 strings with 6830 characters,
+and the built_in function-call counts, 6191 in all, are:
+= -- 608
+> -- 156
+< -- 60
++ -- 36
+- -- 32
+* -- 436
+:= -- 916
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 96
+chr.to.int$ -- 12
+cite$ -- 32
+duplicate$ -- 324
+empty$ -- 437
+format.name$ -- 92
+if$ -- 1197
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 83
+num.names$ -- 92
+pop$ -- 80
+preamble$ -- 1
+purify$ -- 184
+quote$ -- 0
+skip$ -- 318
+stack$ -- 0
+substring$ -- 308
+swap$ -- 60
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 304
+warning$ -- 16
+while$ -- 32
+width$ -- 0
+write$ -- 210
+(There were 16 warnings)

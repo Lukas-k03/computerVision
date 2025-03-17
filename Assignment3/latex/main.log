@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.24)  9 MAR 2025 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.24)  12 MAR 2025 22:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -667,8 +667,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  (./Chapter_01.tex
 Chapter 1.
 
-Underfull \hbox (badness 1331) in paragraph at lines 4--8
-\OT1/Crlt-OsF/m/n/12 I have ap-plied three im-age seg-men-ta-tion tech-niques in this As-sign-ment: two-class Otsu's
+Underfull \hbox (badness 1609) in paragraph at lines 4--7
+\OT1/Crlt-OsF/m/n/12 model us-ing Otsu's bi-na-riza-tion, Otsu's method with mul-ti-ple thresh-olds, and Mean Shift
  []
 
 
@@ -681,31 +681,31 @@ Underfull \hbox (badness 1331) in paragraph at lines 4--8
 Chapter 2.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 10.
+(hyperref)                than one, level fixed on input line 9.
 
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write7
 \openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250309175545 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted config  --timestamp 20250312223000 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250309175545 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleanconfig  --timestamp 20250312223000 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./_minted/default.style.minted) (./_minted/459629793835ED1E6D61426D95BDBBE3.highlight.minted) (./_minted/8219706956BE41F25648D464883CC67F.highlight.minted)
 <figuire1.png, id=102, 628.3475pt x 382.42876pt>
 File: figuire1.png Graphic file (type png)
 <use figuire1.png>
-Package pdftex.def Info: figuire1.png  used on input line 38.
+Package pdftex.def Info: figuire1.png  used on input line 37.
 (pdftex.def)             Requested size: 450.96797pt x 274.46735pt.
 <figuire2.png, id=104, 206.7725pt x 78.2925pt>
 File: figuire2.png Graphic file (type png)
 <use figuire2.png>
-Package pdftex.def Info: figuire2.png  used on input line 47.
+Package pdftex.def Info: figuire2.png  used on input line 46.
 (pdftex.def)             Requested size: 225.4804pt x 85.37773pt.
 <figuire3.png, id=105, 213.79875pt x 80.3pt>
 File: figuire3.png Graphic file (type png)
 <use figuire3.png>
-Package pdftex.def Info: figuire3.png  used on input line 54.
+Package pdftex.def Info: figuire3.png  used on input line 53.
 (pdftex.def)             Requested size: 225.4804pt x 84.6875pt.
 
 
@@ -719,100 +719,109 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 
 
 [4])
-<OTSU21.png, id=127, 629.35126pt x 202.7575pt>
+<OTSU21.png, id=127, 627.34375pt x 384.43625pt>
 File: OTSU21.png Graphic file (type png)
 <use OTSU21.png>
-Package pdftex.def Info: OTSU21.png  used on input line 133.
-(pdftex.def)             Requested size: 450.96797pt x 145.28917pt.
-<OTSU22.png, id=128, 630.355pt x 196.735pt>
+Package pdftex.def Info: OTSU21.png  used on input line 131.
+(pdftex.def)             Requested size: 375.80544pt x 230.29982pt.
+<OTSU22.png, id=128, 627.34375pt x 381.425pt>
 File: OTSU22.png Graphic file (type png)
 <use OTSU22.png>
-Package pdftex.def Info: OTSU22.png  used on input line 140.
-(pdftex.def)             Requested size: 450.96797pt x 140.74849pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<OTSU23.png, id=129, 628.3475pt x 199.74625pt>
+Package pdftex.def Info: OTSU22.png  used on input line 138.
+(pdftex.def)             Requested size: 375.80544pt x 228.49591pt.
+<OTSU23.png, id=129, 628.3475pt x 383.4325pt>
 File: OTSU23.png Graphic file (type png)
 <use OTSU23.png>
-Package pdftex.def Info: OTSU23.png  used on input line 147.
-(pdftex.def)             Requested size: 450.96797pt x 143.35695pt.
+Package pdftex.def Info: OTSU23.png  used on input line 145.
+(pdftex.def)             Requested size: 375.80544pt x 229.32408pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./_minted/E37861B63B1D977769792CF8F329230A.highlight.minted
 
-[5 <./OTSU21.png>]) (./_minted/FD210E99816242BAE99617359EDEEE3D.highlight.minted
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./OTSU22.png> <./OTSU23.png>])
-<OTSUM1.png, id=151, 832.10875pt x 202.7575pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[5]
+
+[6 <./OTSU21.png> <./OTSU22.png>]
+
+[7 <./OTSU23.png>] (./_minted/E37861B63B1D977769792CF8F329230A.highlight.minted) (./_minted/FD210E99816242BAE99617359EDEEE3D.highlight.minted
+
+[8
+
+])
+<OTSUM1.png, id=159, 844.15375pt x 386.44376pt>
 File: OTSUM1.png Graphic file (type png)
 <use OTSUM1.png>
-Package pdftex.def Info: OTSUM1.png  used on input line 216.
-(pdftex.def)             Requested size: 450.96797pt x 109.88652pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<OTSUM2.png, id=152, 836.12375pt x 201.75375pt>
+Package pdftex.def Info: OTSUM1.png  used on input line 215.
+(pdftex.def)             Requested size: 450.96797pt x 206.45348pt.
+<OTSUM2.png, id=160, 838.13126pt x 384.43625pt>
 File: OTSUM2.png Graphic file (type png)
 <use OTSUM2.png>
-Package pdftex.def Info: OTSUM2.png  used on input line 223.
-(pdftex.def)             Requested size: 450.96797pt x 108.81917pt.
+Package pdftex.def Info: OTSUM2.png  used on input line 222.
+(pdftex.def)             Requested size: 450.96797pt x 206.84749pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<OTSUM3.png, id=153, 834.11626pt x 199.74625pt>
+<OTSUM3.png, id=161, 841.1425pt x 386.44376pt>
 File: OTSUM3.png Graphic file (type png)
 <use OTSUM3.png>
-Package pdftex.def Info: OTSUM3.png  used on input line 230.
-(pdftex.def)             Requested size: 450.96797pt x 107.99547pt.
+Package pdftex.def Info: OTSUM3.png  used on input line 229.
+(pdftex.def)             Requested size: 450.96797pt x 207.19057pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[7]
-<MEAN1.png, id=158, 633.36626pt x 201.75375pt>
+[9 <./OTSUM1.png>]
+
+[10 <./OTSUM2.png> <./OTSUM3.png>] (./_minted/1DA463CE794C2DF755CAFDD8C8BF04B3.highlight.minted)
+<MEAN1.png, id=175, 629.35126pt x 381.425pt>
 File: MEAN1.png Graphic file (type png)
 <use MEAN1.png>
-Package pdftex.def Info: MEAN1.png  used on input line 245.
-(pdftex.def)             Requested size: 450.96797pt x 143.6556pt.
+Package pdftex.def Info: MEAN1.png  used on input line 263.
+(pdftex.def)             Requested size: 450.96797pt x 273.31627pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MEAN2.png, id=159, 630.355pt x 200.75pt>
+<MEAN2.png, id=176, 633.36626pt x 387.4475pt>
 File: MEAN2.png Graphic file (type png)
 <use MEAN2.png>
-Package pdftex.def Info: MEAN2.png  used on input line 252.
-(pdftex.def)             Requested size: 450.96797pt x 143.62091pt.
+Package pdftex.def Info: MEAN2.png  used on input line 270.
+(pdftex.def)             Requested size: 450.96797pt x 275.87593pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MEAN3.png, id=160, 625.33624pt x 198.7425pt>
+<MEAN3.png, id=177, 637.38126pt x 386.44376pt>
 File: MEAN3.png Graphic file (type png)
 <use MEAN3.png>
-Package pdftex.def Info: MEAN3.png  used on input line 259.
-(pdftex.def)             Requested size: 450.96797pt x 143.32799pt.
+Package pdftex.def Info: MEAN3.png  used on input line 277.
+(pdftex.def)             Requested size: 450.96797pt x 273.42172pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)
-Underfull \hbox (badness 1184) in paragraph at lines 265--23
-\OT1/Crlt-OsF/m/n/12 ex-tends the thresh-old-ing pro-cess be-yond a sim-ple bi-nary par-ti-tion, al-low-ing seg-men-ta-tion
- []
 
-
-
-[8 <./OTSUM1.png> <./OTSUM2.png> <./OTSUM3.png>]
-
-[9 <./MEAN1.png> <./MEAN2.png> <./MEAN3.png>]
-
-[10] (./main.bbl)
 
 [11
+
+]
+
+[12 <./MEAN1.png> <./MEAN2.png>]
+
+[13 <./MEAN3.png>])
+
+[14
+
+] (./main.bbl)
+
+[15
 
 
 
@@ -825,18 +834,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 78D203A1CE785BB63EE70CCB5365B693;1964.
  ) 
 Here is how much of TeX's memory you used:
- 20450 strings out of 473207
- 384801 string characters out of 5716282
- 981838 words of memory out of 5000000
- 43289 multiletter control sequences out of 15000+600000
- 601785 words of font info for 75 fonts, out of 8000000 for 9000
+ 20459 strings out of 473207
+ 385169 string characters out of 5716282
+ 980843 words of memory out of 5000000
+ 43292 multiletter control sequences out of 15000+600000
+ 601616 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,117p,2041b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (14 pages, 1954870 bytes).
+ 94i,9n,117p,1938b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (18 pages, 3739576 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

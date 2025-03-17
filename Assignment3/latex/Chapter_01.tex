@@ -1,8 +1,7 @@
 \chapter{Introduction}
 
 %-------------------------------------------------------
-I have applied three image segmentation techniques in this Assignment: two-class Otsu's binarization, multi-thresholded Otsu's method, and the Mean Shift segmentation. I applied the method of Otsu to segment images into distinct foreground and background regions by computing optimal threshold values first for two classes and later generalized to multiple classes for segmentation of a higher level. The process of Mean Shift was applied to detect groups of pixels in the feature space to enhance segmentation by aggregating pixels with comparable features. A graphical user interface (GUI) was also designed to help users see and interact with the results of segmentation in real-time. This report discusses the implementation, results, and conclusions obtained with the help of these segmentation techniques.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This assignment demonstrates three different approaches for image segmentation: the twoclass model using Otsu's binarization, Otsu's method with multiple thresholds, and Mean Shift segmentation. A graphic user interface was also built using Tkinter entirely so users could interactively experiment with these segmentation techniques. The function Otsu's Method for Two Classes converts the given image into a grayscale image and uses Otsu's thresholding method from OpenCV. This method automatically calculates the optimal threshold value to separate the image into objects and background. The output from the process on the segmented image is converted into a Tkinter-compatible format. Expanding upon this, Otsu's method for multiple classes extends the thresholding into a more complex process rather than a simple binary partition into two classes. This is made possible by the threshold multiotsu function from skimage.filters. Using the GUI, users may choose how many classes they may want, whereas the segmented regions are given different colors through the use of a Matplotlib colormap for enhanced visual differentiation. The implementation of the Mean Shift Segmentation method is given respect to OpenCV's pyrMeanShiftFiltering method for image clustering based on pixel similarity, taking into account both spatial and chromatic similarity using the spatial radius with the parameter sp and the color range radius with the parameters sr. Overall, this assigment clearly progresses through different image segmentation techniques to demonstrate their effectiveness to separate different regions within the images. The Interactive GUI enhances usability and  enables the user to experiment with various segmentation parameters and thereby instantly observe the changes. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SUBSECTION NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -127,28 +126,28 @@ q_1(t) = \sum_{i=1}^{t} P(i) \quad \& \quad q_2(t) = \sum_{i=t+1}^{I} P(i)
 \end{equation}
 (See Reference 2)
 Otsu Binary (2 class) method will seek out a threshold on the histogram that best seperates the image based on the variance of the frequency of all the pixles. This threshold will then be used as a cut off point. For example if t = 170, any pixel values above 170 will be white and any below 170 will be black, this can be usefull to segment specific types of images. For example image three it works well because the image is less complex and has destinct regions.
-
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = .96\textwidth]{OTSU21.png}
+    \includegraphics[width = .80\textwidth]{OTSU21.png}
     \caption[Otsu Method (2 Classes) Image 1]%
     {Otsu Method (2 Classes) Image 1} 
     \label{fig:exD}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = .96\textwidth]{OTSU22.png}
+    \includegraphics[width = .80\textwidth]{OTSU22.png}
     \caption[Otsu Method (2 Classes) Image 2]%
     {Otsu Method (2 Classes) Image 2} 
     \label{fig:exE}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = .96\textwidth]{OTSU23.png}
+    \includegraphics[width = .80\textwidth]{OTSU23.png}
     \caption[Otsu Method (2 Classes) Image 3]%
     {Otsu Method (2 Classes) Image 3} 
     \label{fig:exF}
 \end{figure}
+\clearpage
 Implamentation:
 \begin{minted}[fontsize=\small, linenos, breaklines]{python}
 def otsu2Classes(image):
@@ -232,6 +231,7 @@ def otsuManyClasses(image):
     {Otsu Method (Three Classes) Image 3} 
     \label{fig:exI}
 \end{figure}
+\clearpage
 \subsection{Explanation Of Mean Shift Segmentation}
 Mean Shift is a clustering-based image segmentation technique that iteratively shifts data points toward the densest regions in the feature space. The steps are as follows:
 \begin{enumerate}
@@ -240,6 +240,24 @@ Mean Shift is a clustering-based image segmentation technique that iteratively s
     \item Update the position by shifting the point toward the new mean.
     \item Repeat until convergence (shifts become negligible).
 \end{enumerate}
+This method was implemented using OpenCV’s pyrMeanShiftFiltering function. This technique clusters pixels based on their spatial and chromatic similarities, controlled by the spatial radius (sp) and color range radius (sr) parameters.
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+    def meanShift(image):
+        imageNP = ConverTKINTERtoCV2(image)
+    
+        """
+        sp: Spatial window radius (controls window size).
+        sr: Color range radius (controls how similar colors are grouped)
+        this line applies meanshift method with the specified permatetors abve
+        """
+        segmented = cv2.pyrMeanShiftFiltering(imageNP, sp=3, sr=40)
+    
+        #update image
+        filteredImage = ConvertCV2ToTKINTER(segmented)
+        imageBottom.config(image=filteredImage)
+        imageBottom.image = filteredImage
+        return
+    \end{minted}
 \begin{figure}[h!]
     \centering
     \includegraphics[width = .96\textwidth]{MEAN1.png}
@@ -261,5 +279,6 @@ Mean Shift is a clustering-based image segmentation technique that iteratively s
     {Mean Shift Image 3} 
     \label{fig:exM}
 \end{figure}
+\clearpage
 \subsection{Discussion}
-The implementation of this assignmnet explores three different image segmentation approaches: the two-class model using Otsu’s binarization, Otsu’s method with multiple thresholds, and Mean Shift segmentation. Additionally, a graphical user interface (GUI) was developed using Tkinter to facilitate interactive experimentation with these segmentation techniques. The \textbf{Otsu’s Method for Two Classes} function converts an image to grayscale and applies Otsu’s thresholding method using OpenCV. This technique automatically determines an optimal threshold value to separate the image into foreground and background. The segmented result is then converted into a format suitable for display in Tkinter. Expanding on this, the \textbf{Otsu’s Method for Multiple Classes} extends the thresholding process beyond a simple binary partition, allowing segmentation into multiple classes. This is implemented using the \texttt{threshold\_multiotsu} function from the \texttt{skimage.filters} module. The GUI provides a dropdown menu for selecting the number of classes, and the segmented regions are assigned distinct colors using a Matplotlib colormap to enhance visual differentiation. The \textbf{Mean Shift Segmentation} method was implemented using OpenCV’s pyrMeanShiftFiltering function. This technique clusters pixels based on their spatial and chromatic similarities, controlled by the spatial radius (\texttt{sp}) and color range radius (\texttt{sr}) parameters. These parameters were carefully optimized to achieve meaningful segmentation while preserving important details in the image. Overall, this assignment successfully demonstrates various image segmentation techniques and their effectiveness in distinguishing different regions within images. The interactive GUI enhances usability, enabling users to experiment with different segmentation parameters and immediately visualize their impact.
+I first attempted using Otsu's method on the whole image to determine a global threshold level for segmentation. I soon realized, though, that this was not appropriate since it would not cater to relative light and contrast differences within the different areas of the image. Since we were looking for segmentation of useful areas and not a threshold value for the whole image, we needed a local threshold method. With the use of a local operator, I was able to segment different areas within the image based upon their corresponding intensity distributions adaptively and thus got better region detection. Another problem with the colors used with the segmented areas was that the colors were random and were not facilitating different areas to be differentiated consistently. The colors were most likely resulting from ad hoc color mapping with no structured mapping. The problem was rectified using a colormap offered by NumPy that made color mapping systematic and visually interpretable. The use of a predefined colormap allowed the segmentation results to be better legible and compare the different areas within the image.

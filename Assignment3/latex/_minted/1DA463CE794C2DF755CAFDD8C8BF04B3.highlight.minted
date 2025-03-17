@@ -1,0 +1,17 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{k}{def} \PYG{n+nf}{meanShift}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{imageNP} \PYG{o}{=} \PYG{n}{ConverTKINTERtoCV2}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{        sp: Spatial window radius (controls window size).}
+\PYG{l+s+sd}{        sr: Color range radius (controls how similar colors are grouped)}
+\PYG{l+s+sd}{        this line applies meanshift method with the specified permatetors abve}
+\PYG{l+s+sd}{        \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+        \PYG{n}{segmented} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{pyrMeanShiftFiltering}\PYG{p}{(}\PYG{n}{imageNP}\PYG{p}{,} \PYG{n}{sp}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{n}{sr}\PYG{o}{=}\PYG{l+m+mi}{40}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{}update image}
+        \PYG{n}{filteredImage} \PYG{o}{=} \PYG{n}{ConvertCV2ToTKINTER}\PYG{p}{(}\PYG{n}{segmented}\PYG{p}{)}
+        \PYG{n}{imageBottom}\PYG{o}{.}\PYG{n}{config}\PYG{p}{(}\PYG{n}{image}\PYG{o}{=}\PYG{n}{filteredImage}\PYG{p}{)}
+        \PYG{n}{imageBottom}\PYG{o}{.}\PYG{n}{image} \PYG{o}{=} \PYG{n}{filteredImage}
+        \PYG{k}{return}
+\end{MintedVerbatim}

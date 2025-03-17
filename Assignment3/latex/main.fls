@@ -370,6 +370,9 @@ INPUT ./OTSUM3.png
 INPUT ./OTSUM3.png
 INPUT ./OTSUM3.png
 INPUT ./OTSUM3.png
+INPUT ./_minted/1DA463CE794C2DF755CAFDD8C8BF04B3.highlight.minted
+INPUT ./_minted/1DA463CE794C2DF755CAFDD8C8BF04B3.highlight.minted
+INPUT _minted/1DA463CE794C2DF755CAFDD8C8BF04B3.highlight.minted
 INPUT ./MEAN1.png
 INPUT ./MEAN1.png
 INPUT ./MEAN1.png
@@ -385,7 +388,6 @@ INPUT ./MEAN3.png
 INPUT ./MEAN3.png
 INPUT ./MEAN3.png
 INPUT ./MEAN3.png
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -411,4 +413,3 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
