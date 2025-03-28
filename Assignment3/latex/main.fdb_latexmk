@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1741822899.93391 "main.aux" "main.bbl" "main" 1741833004.23274 0
+["bibtex main"] 1742700514.56845 "main.aux" "main.bbl" "main" 1742700517.96931 0
   "./references.bib" 1741539273.75438 4470 ce09d7f9d1f6aabbeedae9d5f7478585 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/ascelike/ascelike.bst" 1360972716 34611 d1ce19bd45ef870dc2144f49a75c5a21 ""
-  "Chapter_01.aux" 1741833003.94448 5398 bd975b308cb1b818d3a9b26f8ac7605d "pdflatex"
-  "Title.aux" 1741833001.40211 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
-  "main.aux" 1741833003.96399 1585 3999a5158dffb2e6f5f8034cf8955139 "pdflatex"
+  "Chapter_01.aux" 1742700517.65272 5398 bd975b308cb1b818d3a9b26f8ac7605d "pdflatex"
+  "Title.aux" 1742700515.27851 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
+  "main.aux" 1742700517.67405 1585 3999a5158dffb2e6f5f8034cf8955139 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1741833000.70839 "/Users/lkelk/Documents/GitHub/computerVision/Assignment3/latex/main.tex" "main.pdf" "main" 1741833004.23297 0
+["pdflatex"] 1742700514.66729 "/Users/lkelk/Documents/GitHub/computerVision/Assignment3/latex/main.tex" "main.pdf" "main" 1742700517.96954 0
   "/Users/lkelk/Documents/GitHub/computerVision/Assignment3/latex/main.tex" 1740862536.14171 848 960f75a7c7e58dbc529aeb04738b0d96 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/carlito/crlt_zisnlb.enc" 1664999222 3105 fe84215d6e1e68b95a7d9a8041ee418c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -158,8 +158,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1737752697 5466570 e8651e7fa7bb054fee9a07d3f37faf28 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1737752898 3352284 5fd5b3880861fc8e8a4af31d9045f219 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Chapter_01.aux" 1741833003.94448 5398 bd975b308cb1b818d3a9b26f8ac7605d "pdflatex"
-  "Chapter_01.tex" 1741833000.45372 14879 7b5da30de5cef355b56a9ebf4405e476 ""
+  "Chapter_01.aux" 1742700517.65272 5398 bd975b308cb1b818d3a9b26f8ac7605d "pdflatex"
+  "Chapter_01.tex" 1742700510.96541 14879 7b5da30de5cef355b56a9ebf4405e476 ""
   "MEAN1.png" 1741808381.9168 536990 47a275434d2867d8bb79adbf7352f355 ""
   "MEAN2.png" 1741808381.96564 563543 ac5686c64f0a20b6b7ddc257b1f3cd33 ""
   "MEAN3.png" 1741808381.9328 304373 dfb8f907ae2e4f5e7ac705c468998db4 ""
@@ -169,7 +169,7 @@
   "OTSUM1.png" 1741808381.99745 575073 f9858147ccaaf14432d144ec99a124f8 ""
   "OTSUM2.png" 1741808381.98703 584830 7997b2b305f70595f81e9fc0f71a2193 ""
   "OTSUM3.png" 1741808381.97842 404139 888359f153ec97682b26f5e312bd299a ""
-  "Title.aux" 1741833001.40211 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
+  "Title.aux" 1742700515.27851 1381 238c28f5da70204de5c25a6f14452224 "pdflatex"
   "Title.tex" 1740862536.06436 1043 ad69bd22e035b289a7f86728094f8327 ""
   "_minted/1DA463CE794C2DF755CAFDD8C8BF04B3.highlight.minted" 1741822317.68963 1214 ef41bba37fdca74db0a402bc36956241 ""
   "_minted/2D5D3EE25A33CDBB578CC5CA5F6C614D.highlight.minted" 1741481269.25166 5887 cb5508f0157cfe5116be0d91c381ebe0 ""
@@ -183,12 +183,12 @@
   "figuire2.png" 1741480861.42239 60100 835f0534c98d0be90db10868ed48fe4e ""
   "figuire3.png" 1741480866.65428 37966 370e3860a7b33c57e54cff41c8bef1a0 ""
   "formatting.sty" 1740862536.08596 6740 943436b24981ce1a084ad77f7950f8fe ""
-  "main.aux" 1741833003.96399 1585 3999a5158dffb2e6f5f8034cf8955139 "pdflatex"
-  "main.bbl" 1741822900.02128 2911 b3249aa4055ebed7f0d98159fd881f8b "bibtex main"
-  "main.lof" 1741833003.96562 1337 d9bc4e95816f3ac317442e347a2da6ed "pdflatex"
-  "main.out" 1741833003.96538 1964 78d203a1ce785bb63ee70ccb5365b693 "pdflatex"
+  "main.aux" 1742700517.67405 1585 3999a5158dffb2e6f5f8034cf8955139 "pdflatex"
+  "main.bbl" 1742700514.66468 2911 b3249aa4055ebed7f0d98159fd881f8b "bibtex main"
+  "main.lof" 1742700517.67607 1337 d9bc4e95816f3ac317442e347a2da6ed "pdflatex"
+  "main.out" 1742700517.67584 1964 78d203a1ce785bb63ee70ccb5365b693 "pdflatex"
   "main.tex" 1740862536.14171 848 960f75a7c7e58dbc529aeb04738b0d96 ""
-  "main.toc" 1741833003.96558 939 1d9280a328a042957af8575839e6e0c3 "pdflatex"
+  "main.toc" 1742700517.67605 939 1d9280a328a042957af8575839e6e0c3 "pdflatex"
   (generated)
   "Chapter_01.aux"
   "Title.aux"
