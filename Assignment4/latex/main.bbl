@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{}{{OpenCV Documentation Team}}{2025a}]{sift_feature_matching}
+{OpenCV Documentation Team} (2025a).
+\newblock ``{Feature Matching in OpenCV}.
+\newblock Accessed: 2025-04-07.
+
+\bibitem[\protect\citeauthoryear{}{{OpenCV Documentation Team}}{2025b}]{sift_opencv_intro}
+{OpenCV Documentation Team} (2025b).
+\newblock ``{Introduction to SIFT (Scale-Invariant Feature Transform)}.
+\newblock Accessed: 2025-04-07.
+
+\bibitem[\protect\citeauthoryear{}{Ron2112}{2025}]{sift_kaggle_ron2112}
+Ron2112 (2025).
+\newblock ``Sift - scale space extrema detection.
+\newblock Accessed: 2025-04-08.
+
+\end{thebibliography}

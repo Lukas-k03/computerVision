@@ -1,0 +1,14 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{n}{img1Orientation} \PYG{o}{=} \PYG{n}{img1}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{kp} \PYG{o+ow}{in} \PYG{n}{kp1}\PYG{p}{:}
+        \PYG{n}{x}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{n}{kp}\PYG{o}{.}\PYG{n}{pt}
+        \PYG{n}{angle} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{deg2rad}\PYG{p}{(}\PYG{n}{kp}\PYG{o}{.}\PYG{n}{angle}\PYG{p}{)}
+        \PYG{n}{length} \PYG{o}{=} \PYG{n}{kp}\PYG{o}{.}\PYG{n}{size} \PYG{o}{/} \PYG{l+m+mi}{2}
+        \PYG{n}{x2} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x} \PYG{o}{+} \PYG{n}{length} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{angle}\PYG{p}{)}\PYG{p}{)}
+        \PYG{n}{y2} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{y} \PYG{o}{+} \PYG{n}{length} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{angle}\PYG{p}{)}\PYG{p}{)}
+        \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{arrowedLine}\PYG{p}{(}\PYG{n}{img1Orientation}\PYG{p}{,} \PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{n}{x2}\PYG{p}{,} \PYG{n}{y2}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{tipLength}\PYG{o}{=}\PYG{l+m+mf}{0.3}\PYG{p}{)}
+
+    \PYG{n}{imageRightMiddlePhoto} \PYG{o}{=} \PYG{n}{ConvertCV2ToTKINTER}\PYG{p}{(}\PYG{n}{img1Orientation}\PYG{p}{)}
+    \PYG{n}{imageRightMiddle}\PYG{o}{.}\PYG{n}{config}\PYG{p}{(}\PYG{n}{image}\PYG{o}{=}\PYG{n}{imageRightMiddlePhoto}\PYG{p}{)}
+    \PYG{n}{imageRightMiddle}\PYG{o}{.}\PYG{n}{image} \PYG{o}{=} \PYG{n}{imageRightMiddlePhoto}
+\end{MintedVerbatim}

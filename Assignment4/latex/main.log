@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.24)  9 APR 2025 19:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.24)  9 APR 2025 19:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/lkelk/Documents/GitHub/computerVision/Assignment3/latex/main.tex
-(/Users/lkelk/Documents/GitHub/computerVision/Assignment3/latex/main.tex
+**/Users/lkelk/Documents/GitHub/computerVision/Assignment4/latex/main.tex
+(/Users/lkelk/Documents/GitHub/computerVision/Assignment4/latex/main.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
@@ -667,8 +667,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  (./Chapter_01.tex
 Chapter 1.
 
-Underfull \hbox (badness 1609) in paragraph at lines 4--7
-\OT1/Crlt-OsF/m/n/12 model us-ing Otsu's bi-na-riza-tion, Otsu's method with mul-ti-ple thresh-olds, and Mean Shift
+Underfull \hbox (badness 1546) in paragraph at lines 4--8
+\OT1/Crlt-OsF/m/n/12 im-ple-men-ta-tion de-ci-sions, ex-per-i-men-tal find-ings, and anal-y-sis of per-for-mance of the SIFT
  []
 
 
@@ -679,149 +679,110 @@ Underfull \hbox (badness 1609) in paragraph at lines 4--7
 
 ]
 Chapter 2.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 9.
-
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write7
 \openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250409191530 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted config  --timestamp 20250409194601 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250409191530 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleanconfig  --timestamp 20250409194601 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
- (./_minted/default.style.minted) (./_minted/459629793835ED1E6D61426D95BDBBE3.highlight.minted) (./_minted/8219706956BE41F25648D464883CC67F.highlight.minted)
-<figuire1.png, id=102, 628.3475pt x 382.42876pt>
-File: figuire1.png Graphic file (type png)
-<use figuire1.png>
-Package pdftex.def Info: figuire1.png  used on input line 37.
-(pdftex.def)             Requested size: 450.96797pt x 274.46735pt.
-<figuire2.png, id=104, 206.7725pt x 78.2925pt>
-File: figuire2.png Graphic file (type png)
-<use figuire2.png>
-Package pdftex.def Info: figuire2.png  used on input line 46.
-(pdftex.def)             Requested size: 225.4804pt x 85.37773pt.
-<figuire3.png, id=105, 213.79875pt x 80.3pt>
-File: figuire3.png Graphic file (type png)
-<use figuire3.png>
-Package pdftex.def Info: figuire3.png  used on input line 53.
-(pdftex.def)             Requested size: 225.4804pt x 84.6875pt.
+ (./_minted/default.style.minted) (./_minted/DD660198A40EE2890FE5C501EB3045C4.highlight.minted
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
+) (./_minted/81B92F074A42C4547749C52596EC260E.highlight.minted)
+<step1.png, id=98, 154.5775pt x 153.57375pt>
+File: step1.png Graphic file (type png)
+<use step1.png>
+Package pdftex.def Info: step1.png  used on input line 34.
+(pdftex.def)             Requested size: 234.8775pt x 233.37358pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 
 [2
 
-] (./_minted/2D5D3EE25A33CDBB578CC5CA5F6C614D.highlight.minted
-
-[3 <./figuire1.png> <./figuire2.png> <./figuire3.png>]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 30.
-
-
-[4])
-<OTSU21.png, id=127, 627.34375pt x 384.43625pt>
-File: OTSU21.png Graphic file (type png)
-<use OTSU21.png>
-Package pdftex.def Info: OTSU21.png  used on input line 131.
-(pdftex.def)             Requested size: 375.80544pt x 230.29982pt.
-<OTSU22.png, id=128, 627.34375pt x 381.425pt>
-File: OTSU22.png Graphic file (type png)
-<use OTSU22.png>
-Package pdftex.def Info: OTSU22.png  used on input line 138.
-(pdftex.def)             Requested size: 375.80544pt x 228.49591pt.
-<OTSU23.png, id=129, 628.3475pt x 383.4325pt>
-File: OTSU23.png Graphic file (type png)
-<use OTSU23.png>
-Package pdftex.def Info: OTSU23.png  used on input line 145.
-(pdftex.def)             Requested size: 375.80544pt x 229.32408pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+] (./_minted/8671A0956D846D43EDD87362DC60CF17.highlight.minted)
+<step2.png, id=106, 152.57pt x 152.57pt>
+File: step2.png Graphic file (type png)
+<use step2.png>
+Package pdftex.def Info: step2.png  used on input line 56.
+(pdftex.def)             Requested size: 234.8775pt x 234.88635pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[5]
-
-[6 <./OTSU21.png> <./OTSU22.png>]
-
-[7 <./OTSU23.png>] (./_minted/E37861B63B1D977769792CF8F329230A.highlight.minted) (./_minted/FD210E99816242BAE99617359EDEEE3D.highlight.minted
-
-[8
-
-])
-<OTSUM1.png, id=159, 844.15375pt x 386.44376pt>
-File: OTSUM1.png Graphic file (type png)
-<use OTSUM1.png>
-Package pdftex.def Info: OTSUM1.png  used on input line 215.
-(pdftex.def)             Requested size: 450.96797pt x 206.45348pt.
-<OTSUM2.png, id=160, 838.13126pt x 384.43625pt>
-File: OTSUM2.png Graphic file (type png)
-<use OTSUM2.png>
-Package pdftex.def Info: OTSUM2.png  used on input line 222.
-(pdftex.def)             Requested size: 450.96797pt x 206.84749pt.
+[3 <./step1.png>] (./_minted/A07E2CFE9BF983DC9B3EF5905BBE0653.highlight.minted)
+<step3.png, id=112, 152.57pt x 153.57375pt>
+File: step3.png Graphic file (type png)
+<use step3.png>
+Package pdftex.def Info: step3.png  used on input line 83.
+(pdftex.def)             Requested size: 234.8775pt x 236.43164pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<OTSUM3.png, id=161, 841.1425pt x 386.44376pt>
-File: OTSUM3.png Graphic file (type png)
-<use OTSUM3.png>
-Package pdftex.def Info: OTSUM3.png  used on input line 229.
-(pdftex.def)             Requested size: 450.96797pt x 207.19057pt.
+
+
+[4 <./step2.png>] (./_minted/227B691F0AA91B7FA68BDF1367CABA75.highlight.minted)
+<step4.png, id=121, 451.6875pt x 227.85126pt>
+File: step4.png Graphic file (type png)
+<use step4.png>
+Package pdftex.def Info: step4.png  used on input line 112.
+(pdftex.def)             Requested size: 328.82707pt x 165.88501pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[9 <./OTSUM1.png>]
+[5 <./step3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+|[]\OT1/Crlt-OsF/b/n/14 RESULTS|
+ []
 
-[10 <./OTSUM2.png> <./OTSUM3.png>] (./_minted/1DA463CE794C2DF755CAFDD8C8BF04B3.highlight.minted)
-<MEAN1.png, id=175, 629.35126pt x 381.425pt>
-File: MEAN1.png Graphic file (type png)
-<use MEAN1.png>
-Package pdftex.def Info: MEAN1.png  used on input line 263.
-(pdftex.def)             Requested size: 450.96797pt x 273.31627pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<MEAN2.png, id=176, 633.36626pt x 387.4475pt>
-File: MEAN2.png Graphic file (type png)
-<use MEAN2.png>
-Package pdftex.def Info: MEAN2.png  used on input line 270.
-(pdftex.def)             Requested size: 450.96797pt x 275.87593pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<MEAN3.png, id=177, 637.38126pt x 386.44376pt>
-File: MEAN3.png Graphic file (type png)
-<use MEAN3.png>
-Package pdftex.def Info: MEAN3.png  used on input line 277.
-(pdftex.def)             Requested size: 450.96797pt x 273.42172pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<test1.png, id=128, 454.69875pt x 610.28pt>
+File: test1.png Graphic file (type png)
+<use test1.png>
+Package pdftex.def Info: test1.png  used on input line 123.
+(pdftex.def)             Requested size: 234.8775pt x 315.24289pt.
 
 
+[6 <./step4.png> <./test1.png>]
+<test2.png, id=135, 454.69875pt x 609.27625pt>
+File: test2.png Graphic file (type png)
+<use test2.png>
+Package pdftex.def Info: test2.png  used on input line 131.
+(pdftex.def)             Requested size: 422.77664pt x 566.50949pt.
 
-[11
 
-]
+[7 <./test2.png>]
+<test3.png, id=141, 451.6875pt x 612.2875pt>
+File: test3.png Graphic file (type png)
+<use test3.png>
+Package pdftex.def Info: test3.png  used on input line 139.
+(pdftex.def)             Requested size: 422.77664pt x 573.13057pt.
 
-[12 <./MEAN1.png> <./MEAN2.png>]
 
-[13 <./MEAN3.png>])
+[8 <./test3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+|[]\OT1/Crlt-OsF/b/n/14 DISCUSSION|
+ []
 
-[14
+)
 
-] (./main.bbl)
+[9] (./main.bbl
+Underfull \hbox (badness 1527) in paragraph at lines 9--12
+[]\OT1/Crlt-OsF/m/n/11 OpenCV Doc-u-men-ta-tion Team (2025b).  ``In-tro-duc-tion to SIFT (Scale-Invariant Fea-ture Trans-form).
+ []
 
-[15
+)
+
+[10
 
 
 
@@ -831,21 +792,21 @@ LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 78D203A1CE785BB63EE70CCB5365B693;1964.
+(rerunfilecheck)             Checksum: C9D100F021CBE1BCBA5DE15AE88B68CC;1856.
  ) 
 Here is how much of TeX's memory you used:
- 20459 strings out of 473207
- 385169 string characters out of 5716282
- 980843 words of memory out of 5000000
- 43292 multiletter control sequences out of 15000+600000
- 601616 words of font info for 74 fonts, out of 8000000 for 9000
+ 20262 strings out of 473207
+ 380431 string characters out of 5716282
+ 975243 words of memory out of 5000000
+ 43128 multiletter control sequences out of 15000+600000
+ 601448 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,117p,1938b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (18 pages, 3739576 bytes).
+ 94i,10n,117p,1212b,823s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Bold.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/google/carlito/Crlt-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (13 pages, 5763857 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

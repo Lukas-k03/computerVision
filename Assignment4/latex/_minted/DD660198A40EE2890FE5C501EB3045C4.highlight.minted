@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{sift} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{SIFT\PYGZus{}create}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{kp1}\PYG{p}{,} \PYG{n}{des1} \PYG{o}{=} \PYG{n}{sift}\PYG{o}{.}\PYG{n}{detectAndCompute}\PYG{p}{(}\PYG{n}{img1}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+
+\PYG{n}{img1Extrema} \PYG{o}{=} \PYG{n}{img1}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+\end{MintedVerbatim}
